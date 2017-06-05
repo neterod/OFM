@@ -237,8 +237,8 @@
         'compressjs',
         'compilecss',
         'minifyhtml'
-//        ,'compilecssbootstrap'
-//        ,'compresslibraries'
+       ,'compilecssbootstrap'
+        ,'compresslibraries'
     ]);
 }());
 

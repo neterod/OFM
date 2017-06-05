@@ -222,9 +222,14 @@
         $('img[src$=".svg"]').convertSVGsToInline();
 
         $('.flexslider').flexslider({
-            animation: "slide",
-            animationLoop: true,
-        });
+        animation: "fade",
+        animationLoop: true,
+        controlNav: true,
+        manualControls: ".slider-tabs>a",
+        directionNav: false,
+        customDirectionNav: $(".custom-direction-nav a")
+
+      });
 
         // Init parallax
         if (ieVer > 8 || ieVer === -1) {

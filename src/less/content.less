@@ -12,6 +12,7 @@ body {
 
 .middle-content {
     background-color: #fff;
+    padding-bottom: 38px;
 }
 
 .nih-text {
@@ -180,4 +181,26 @@ padding: 0 0 20px 0px;
       }
     }
   }
+}
+
+
+.slider-tabs {
+  background-color: #7FF;
+  position: relative;
+  display: inline-block;
+  padding: .2em .5em;
+}
+
+.slider-tabs::after {
+  border-bottom: 20px solid #7FF;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  width: 0;
+  height: 0;
+  margin-left: 72px;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  left: 1em;
 }
