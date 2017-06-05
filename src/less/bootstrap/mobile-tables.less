@@ -1,0 +1,24 @@
+// main: main.less
+
+table {
+  @media (max-width: @grid-float-breakpoint-max) {
+    width: 100%;
+    th {
+      display: none;
+    }
+    tr {
+      border-bottom: 1px solid #ccc;
+      td {
+        display: block;
+        border: none !important;
+        text-align: right;
+        &:before {
+          content: attr(data-label);
+          color: @gray-light;
+          font-size: .9em;
+          float: left;
+        }
+      }
+    }
+  }
+}
