@@ -50,11 +50,29 @@ padding: 0 0 20px 0px;
     background-color: transparent !important;
 }
 
-.sample {
+.nih {
     width: 200px;
-    height: 45px;
-    background-color: orange;
-}
+    height: 95px;
+    background-color: #00509b;
+    
+    @media (min-width: @screen-md) {
+      font-size: 1.2em;
+      line-height: 1.1em;
+    }
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      background-color: #00509b;
+    }
+    &:first-child {
+      background-color: #f3f3f3;
+      &:hover,
+      &:focus {
+        background-color: #00509b;
+      }
+    }
+  }
+
 
   // Links in navbars
   //
