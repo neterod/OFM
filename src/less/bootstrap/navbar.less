@@ -358,7 +358,7 @@
   margin-right: @navbar-padding-horizontal;
   padding: 9px 10px;
   .navbar-vertical-align(34px);
-  background-color: transparent;
+  background-color: grey;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
   border-radius: @border-radius-base;
@@ -375,6 +375,7 @@
     width: 22px;
     height: 2px;
     border-radius: 1px;
+    background-color: white;
   }
   .icon-bar + .icon-bar {
     margin-top: 4px;
@@ -601,10 +602,10 @@
     border-color: @navbar-default-toggle-border-color;
     &:hover,
     &:focus {
-      background-color: @navbar-default-toggle-hover-bg;
+      background-color: grey;
     }
     .icon-bar {
-      background-color: @navbar-default-toggle-icon-bar-bg;
+      background-color: black;
     }
   }
 
