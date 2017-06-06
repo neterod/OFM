@@ -8,6 +8,7 @@
 
 body {
     background-image: url(../images/background_main.png);
+    overflow-x: hidden;
 }
 
 .middle-content {
@@ -52,7 +53,7 @@ padding: 0 0 20px 0px;
 
 .nih {
     width: 200px;
-    height: 95px;
+    height: 97px;
     background-color: #00509b;
     
     @media (min-width: @screen-md) {
@@ -82,14 +83,13 @@ padding: 0 0 20px 0px;
 
 
 .slider-tabs {
-  background-color: #7FF;
+  background-color: #1f4675;
   position: relative;
   display: inline-block;
-  padding: .2em .5em;
 }
 
 .slider-tabs::after {
-  border-bottom: 20px solid #7FF;
+  border-bottom: 20px solid #1f4675;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   width: 0;
@@ -100,5 +100,89 @@ padding: 0 0 20px 0px;
   position: absolute;
   bottom: 100%;
   left: 1em;
+  z-index: 2;
+}
 
+.slider-tabs2 {
+  background-color: #1d6479;
+  position: relative;
+  display: inline-block;
+}
+
+.slider-tabs2::after {
+  border-bottom: 20px solid #1d6479;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  width: 0;
+  height: 0;
+  margin-left: 72px;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  left: 1em;
+  z-index: 2;
+}
+
+.slider-tabs3 {
+  background-color: #2f1954;
+  position: relative;
+  display: inline-block;
+}
+
+.slider-tabs3::after {
+  border-bottom: 20px solid #2f1954;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  width: 0;
+  height: 0;
+  margin-left: 72px;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  left: 1em;
+  z-index: 2;
+}
+
+.slider-tabs4 {
+  background-color: #455e6a;
+  position: relative;
+  display: inline-block;
+}
+
+.slider-tabs4::after {
+  border-bottom: 20px solid #455e6a;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  width: 0;
+  height: 0;
+  margin-left: 72px;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  left: 1em;
+  z-index: 2;
+}
+
+.slider-tabs5 {
+  background-color: #0a2341;
+  position: relative;
+  display: inline-block;
+}
+
+.slider-tabs5::after {
+  border-bottom: 20px solid #0a2341;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  width: 0;
+  height: 0;
+  margin-left: 72px;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  left: 1em;
+  z-index: 2;
 }
