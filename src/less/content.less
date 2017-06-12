@@ -61,9 +61,10 @@ padding: 0 0 20px 0px;
     background-position: 10% center;
     padding: 29px 0px 0px 89px;
     color: #565e66;
-    @media (min-width: @screen-md) {
+    @media (max-width: @screen-sm) {
       font-size: 1.2em;
       line-height: 1.1em;
+      background-image: none;
     }
     @media (max-width: 767px) {
           display: block;
@@ -82,6 +83,11 @@ padding: 0 0 20px 0px;
         background-color: #00509b;
         background-image: url(../images/nih-on.png);
         color: #fff;
+      @media (max-width: @screen-sm) {
+          font-size: 1.2em;
+          line-height: 1.1em;
+          background-image: none;
+    }
       }
     }
   }
@@ -96,9 +102,10 @@ padding: 0 0 20px 0px;
     background-position: 10% center;
     padding: 29px 0px 0px 89px;
     color: #565e66;
-    @media (min-width: @screen-md) {
-      font-size: 1.2em;
-      line-height: 1.1em;
+    @media (max-width: @screen-sm) {
+          font-size: 1.2em;
+          line-height: 1.1em;
+          background-image: none;
     }
     @media (max-width: 767px) {
           display: block;
@@ -123,6 +130,11 @@ padding: 0 0 20px 0px;
         background-color: #00509b;
         background-image: url(../images/resources-on.png);
         color: #fff;
+          @media (max-width: @screen-sm) {
+          font-size: 1.2em;
+          line-height: 1.1em;
+          background-image: none;
+    }
       }
     }
   }
@@ -137,9 +149,10 @@ padding: 0 0 20px 0px;
     background-position: 10% center;
     padding: 29px 0px 0px 89px;
     color: #565e66;
-    @media (min-width: @screen-md) {
-      font-size: 1.2em;
-      line-height: 1.1em;
+    @media (max-width: @screen-sm) {
+          font-size: 1.2em;
+          line-height: 1.1em;
+          background-image: none;
     }
     @media (max-width: 767px) {
           display: block;
@@ -158,6 +171,11 @@ padding: 0 0 20px 0px;
         background-color: #00509b;
         background-image: url(../images/people-off.png);
         color: #fff;
+          @media (max-width: @screen-sm) {
+          font-size: 1.2em;
+          line-height: 1.1em;
+          background-image: none;
+    }
       }
     }
   }
@@ -172,9 +190,10 @@ padding: 0 0 20px 0px;
     background-position: 10% center;
     padding: 29px 0px 0px 89px;
     color: #565e66;
-    @media (min-width: @screen-md) {
-      font-size: 1.2em;
-      line-height: 1.1em;
+    @media (max-width: @screen-sm) {
+          font-size: 1.2em;
+          line-height: 1.1em;
+          background-image: none;
     }
     @media (max-width: 767px) {
           display: block;
@@ -193,6 +212,11 @@ padding: 0 0 20px 0px;
         background-color: #00509b;
         background-image: url(../images/note-on.png);
         color: #fff;
+          @media (max-width: @screen-sm) {
+          font-size: 1.2em;
+          line-height: 1.1em;
+          background-image: none;
+    }
       }
     }
   }
@@ -207,9 +231,10 @@ padding: 0 0 20px 0px;
     background-position: 10% center;
     padding: 29px 0px 0px 89px;
     color: #565e66;
-    @media (min-width: @screen-md) {
-      font-size: 1.2em;
-      line-height: 1.1em;
+    @media (max-width: @screen-sm) {
+          font-size: 1.2em;
+          line-height: 1.1em;
+          background-image: none;
     }
     @media (max-width: 767px) {
           display: block;
@@ -228,6 +253,11 @@ padding: 0 0 20px 0px;
         background-color: #00509b;
         background-image: url(../images/offices-on.png);
         color: #fff;
+          @media (max-width: @screen-sm) {
+          font-size: 1.2em;
+          line-height: 1.1em;
+          background-image: none;
+    }
       }
     }
   }
@@ -243,6 +273,19 @@ padding: 0 0 20px 0px;
   background-color: #1f4675;
   position: relative;
   display: inline-block;
+    @media (max-width: 767px)
+    {
+        top: 241px;
+    width: 100%;
+    position: absolute;
+    height: 20%;
+    font-size: 24px;
+    margin: 0;
+    padding: 3px 0 1px 15px;
+    transition: .3s;
+    line-height: 1.8em;
+        z-index: 99;
+}
 }
 
 .slider-tabs1.flex-active::after {
@@ -258,6 +301,9 @@ padding: 0 0 20px 0px;
   bottom: 100%;
   left: 50%;
   z-index: 2;
+    @media (max-width: @screen-sm){
+        display: none;
+    }
 }
 
 .slider-tabs2 {
@@ -279,6 +325,9 @@ padding: 0 0 20px 0px;
   bottom: 100%;
   left: 50%;
   z-index: 2;
+     @media (max-width: @screen-sm){
+        display: none;
+    }
 }
 
 .slider-tabs3 {
@@ -300,6 +349,9 @@ padding: 0 0 20px 0px;
   bottom: 100%;
   left: 50%;
   z-index: 2;
+     @media (max-width: @screen-sm){
+        display: none;
+    }
 }
 
 .slider-tabs4 {
@@ -321,6 +373,9 @@ padding: 0 0 20px 0px;
   bottom: 100%;
   left: 50%;
   z-index: 2;
+     @media (max-width: @screen-sm){
+        display: none;
+    }
 }
 
 .slider-tabs5 {
@@ -342,6 +397,9 @@ padding: 0 0 20px 0px;
   bottom: 100%;
   left: 50%;
   z-index: 2;
+     @media (max-width: @screen-sm){
+        display: none;
+    }
 }
 
 .events_ofm {
