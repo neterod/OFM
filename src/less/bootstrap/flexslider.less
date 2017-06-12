@@ -520,6 +520,14 @@
         }
         &:nth-child(4) {
             background-color: @gray-teal;
+            @media (max-width: @screen-sm) {
+                top: 140px;
+                width: 100%;
+                position: absolute;
+                height: 20%;
+                font-size: 24px;
+                z-index: 100;
+            }
             &:hover,
             &:focus {
                 background-color: lighten(@gray-teal, 6%);
@@ -527,6 +535,14 @@
         }
         &:nth-child(5) {
             background-color: @navy;
+            @media (max-width: @screen-sm) {
+                top: 120px;
+                width: 100%;
+                position: absolute;
+                height: 20%;
+                font-size: 24px;
+                z-index: 99;
+            }
             &:hover,
             &:focus {
                 background-color: lighten(@navy, 9%);
