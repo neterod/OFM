@@ -424,23 +424,23 @@
         margin: 0;
         li {
             &#slide1 {
-                background-image: url(../images/slide-placeholder-1.jpg);
+                background-image: url(../images/ofm1.jpg);
                 //        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='../images/slide-placeholder-1.jpg',sizingMethod='scale');
             }
             &#slide2 {
-                background-image: url(../images/slide-placeholder-2.jpg);
+                background-image: url(../images/19730238713_93170d8802_k.jpg);
                 //        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='../images/slide-placeholder-2.jpg',sizingMethod='scale');
             }
             &#slide3 {
-                background-image: url(../images/slide-placeholder-3.jpg);
+                background-image: url(../images/28756947676_efc9cbb468_k.jpg);
                 //        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='../images/slide-placeholder-3.jpg',sizingMethod='scale');
             }
             &#slide4 {
-                background-image: url(../images/slide-placeholder-1.jpg);
+                background-image: url(../images/21869450620_129d1cc9cf_k.jpg);
                 //        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='../images/slide-placeholder-3.jpg',sizingMethod='scale');
             }
             &#slide5 {
-                background-image: url(../images/slide-placeholder-2.jpg);
+                background-image: url(../images/27453013920_6be17de51c_k.jpg);
                 //        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='../images/slide-placeholder-3.jpg',sizingMethod='scale');
             }
         }
@@ -455,6 +455,9 @@
     display: table;
     width: 100%;
     height: @tabs-height;
+    @media (max-width: @screen-sm) {
+                display: none;
+            }
     a {
         display: table-cell;
         vertical-align: middle;
@@ -469,6 +472,7 @@
             line-height: 1.1em;
         }
         @media (max-width: @screen-sm) {
+            display: none;
             top: 250px;
             width: 100%;
             position: absolute;
