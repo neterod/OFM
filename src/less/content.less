@@ -14,6 +14,9 @@ body {
 .middle-content {
     background-color: #fff;
     padding-bottom: 38px;
+     @media (max-width: 768px) {
+        margin-top:190px;
+    }
 }
 
 a.nih-text {
@@ -486,21 +489,58 @@ color: #2c788f
 
 .prev-next-arrow {
     margin-top: 26px;
-     @media (max-width: @screen-sm){
-        margin-top: 145px;
+     @media (max-width: 768px){
+        margin-top: 393px;
+        width: 100%;
 
     }
 }
 
+.prev-next-arrow1 {
+    margin-top: 26px;
+     @media (max-width: 768px){
+        margin-top: 393px;
+        width: 100%;
+       margin-left: -397px;
+    }
+}
+
+
+
 .flex-text {
+    margin-top: -5px;
+    font-size: 25px;
      color: #1f4675;
+    text-align: center;
+    @media (max-width: 768px){
+        text-align: center;
+    }
 }
 
 .flex-text-sm {
-     font-size: 25px;
+     font-size: 20px;
+    @media (max-width: 768px){
+        text-align: center;
+    }
+     @media (max-width: @screen-md){
+        font-size: 13px;
+
+    }
 }
 
 .navbar-header-bg
 {
     background-color: #00549f;
+     @media (min-width: 993px){
+        display: block;
+
+    }
+}
+
+.form-width {
+    width: 113%;
+    @media (max-width: @screen-md){
+        width: 90%;
+
+    }
 }

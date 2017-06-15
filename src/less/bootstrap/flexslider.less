@@ -585,8 +585,11 @@
 .flexslider.home li .container-fluid,
 .custom-direction-nav a {
     height: 128px;
-    @media (min-width: @screen-xs) {
+    @media (max-width: 768px) {
         height: 188px;
+        bottom: -190px;
+    width: 100%;
+        margin-right: -15px;
     }
 }
 .custom-direction-nav {
