@@ -15,6 +15,14 @@ body {
         margin-top: 190px;
     }
 }
+
+.nih-top-logo {
+    width: 367px;
+    text-decoration: none !important;
+    color: #555b62;
+    line-height: 1px;
+}
+
 a.nih-text {
     line-height: 51px;
     font-size: 21px;
@@ -22,16 +30,18 @@ a.nih-text {
     &:hover,
     &:focus {
         text-decoration: none !important;
+        color: #555b62 !important;
     }
 }
 a.nih-text-sm {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 0px;
     margin-top: -9px;
     color: #555b62;
     &:hover,
     &:focus {
         text-decoration: none !important;
+        color: #555b62 !important;
     }
 }
 .logo-padding {
@@ -502,11 +512,9 @@ a.nih-text-sm {
 }
 .flex-text-sm {
     font-size: 20px;
-    @media (max-width: 768px) {
+    @media (min-width: 100px) and (max-width: 1100px) {
         text-align: center;
-    }
-    @media (max-width: @screen-md) {
-        font-size: 13px;
+        font-size: 13px !important;
     }
 }
 .navbar-header-bg {
