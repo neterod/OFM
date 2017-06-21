@@ -316,7 +316,7 @@ a.nih-text-sm {
         height: 20%;
         font-size: 24px;
         margin: 0;
-        padding: 3px 0 1px 15px;
+        padding: 20px;
         transition: .3s;
         line-height: 1.8em;
         z-index: 99;
@@ -476,13 +476,13 @@ a.nih-text-sm {
     margin-right: 10px;
 }
 .prev-next-arrow {
-    margin-top: 26px;
+    margin-top: 15px;
     @media (max-width: 768px) {
         display: none;
     }
 }
 .prev-next-arrow1 {
-    margin-top: 26px;
+    margin-top: 15px;
     margin-left: 153px;
     @media (max-width: 768px) {
         display: none;
@@ -539,6 +539,10 @@ a.nih-text-sm {
     margin: 0;
     margin-top: 5px;
     padding: 0;
+    @media (min-width: 200px) and (max-width: 1033px) {
+        width: auto !important;
+            margin-bottom: 10px;
+    }
 }
 #custom-search-form .search-query {
     width: 290px;
@@ -551,7 +555,10 @@ a.nih-text-sm {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-}
+    @media (min-width: 200px) and (max-width: 1033px) {
+        width: auto !important;
+    }
+    }
 #custom-search-form button {
     border: 0;
     background-image: url(../images/icon-search.png);

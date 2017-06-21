@@ -458,8 +458,8 @@
     width: 100%;
     height: @tabs-height;
     @media (max-width: 1060px) and (min-width: 992px){
-                width: 97%;
-                margin-left: 24px;
+                width: 100%;
+                margin-left: 18px;
             }
     @media (max-width: @screen-sm) {
                 display: none;
@@ -476,6 +476,7 @@
         @media (min-width: @screen-md) {
             font-size: 19px;
             line-height: 1.1em;
+            padding: 0;
         }
         @media (max-width: @screen-sm) {
             display: none;
@@ -485,6 +486,8 @@
             height: 20%;
             font-size: 24px;
             z-index: 103;
+            font-size: 19px;
+            padding: 0;
         }
         &:hover,
         &:focus {
@@ -497,6 +500,9 @@
             &:focus {
                 background-color: lighten(@dark-blue, 4%);
             }
+            @media (max-width: 992px) {
+           padding: 20px !important;
+        }
         }
         &:nth-child(2) {
             background-color: @teal;
@@ -512,6 +518,9 @@
             &:focus {
                 background-color: lighten(@teal, 5%);
             }
+            @media (max-width: 992px) {
+           padding: 20px !important;
+        }
         }
         &:nth-child(3) {
             background-color: @purple;
@@ -527,6 +536,9 @@
             &:focus {
                 background-color: lighten(@purple, 8%);
             }
+            @media (max-width: 992px) {
+           padding: 20px !important;
+        }
         }
         &:nth-child(4) {
             background-color: @gray-teal;
@@ -542,6 +554,9 @@
             &:focus {
                 background-color: lighten(@gray-teal, 6%);
             }
+            @media (max-width: 992px) {
+           padding: 20px !important;
+        }
         }
         &:nth-child(5) {
             background-color: @navy;
@@ -557,6 +572,9 @@
             &:focus {
                 background-color: lighten(@navy, 9%);
             }
+            @media (max-width: 992px) {
+           padding: 20px !important;
+        }
         }
     }
 }
@@ -592,8 +610,8 @@
 .custom-direction-nav a {
     height: 128px;
     @media (max-width: 768px) {
-     height: 188px;
-     bottom: -190px;
+     height: 191px;
+     bottom: -191px;
      width: 100%;
      margin-right: -31px;
  }
