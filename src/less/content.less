@@ -98,13 +98,6 @@ a.nih-text-sm {
             background-color: #00509b;
             background-image: url(../images/nih-on.png);
             color: #fff;
-            @media (max-width: 1200px) {
-                width: @collapsed-nav-width;
-                display: block;
-                margin: 0 !important;
-                padding: 8px 0 6px 74px !important;
-                height: 20%;
-            }
             @media (max-width: @screen-md) {
                 font-size: 1.2em;
                 line-height: 1.1em;
@@ -485,17 +478,17 @@ a.nih-text-sm {
 .prev-next-arrow {
     margin-top: 26px;
     @media (max-width: 768px) {
-        margin-top: 393px;
-        width: 100%;
+        display: none;
     }
 }
 .prev-next-arrow1 {
     margin-top: 26px;
     margin-left: 153px;
     @media (max-width: 768px) {
-        margin-top: 393px;
-        width: 100%;
-        margin-left: -397px;
+        display: none;
+    }
+    @media (max-width: 992px) {
+        margin-left: 0px;
     }
 }
 .flex-text {

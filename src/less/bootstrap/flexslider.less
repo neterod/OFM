@@ -451,10 +451,16 @@
         pointer-events: none;
     }
 }
+
+@middle-tab-width: 5px;
 .slider-tabs {
     display: table;
     width: 100%;
     height: @tabs-height;
+    @media (max-width: 1060px) and (min-width: 992px){
+                width: 97%;
+                margin-left: 24px;
+            }
     @media (max-width: @screen-sm) {
                 display: none;
             }
@@ -589,7 +595,10 @@
      height: 188px;
      bottom: -190px;
      width: 100%;
-     margin-right: -15px;
+     margin-right: -31px;
+ }
+    @media (max-width: @screen-xs) {
+     margin-right: 0px;
  }
 }
 .custom-direction-nav {
@@ -607,6 +616,9 @@
             float: right;
             background-image: url(../images/min-arrow-right.png) no-repeat;
         }
+        @media (max-width: @screen-xs) {
+     display: none;
+ }
     }
 }
 
