@@ -4,24 +4,30 @@
         background-image: url(../images/slide-placeholder-4.jpg);
     }
 }
+
+a {
+  transition: .3s;
+}
+
 body {
     background-image: url(../images/background_main.png);
     overflow-x: hidden;
 }
+
+h4,
+h5,
+h6 {
+  color: @gray-light;
+}
+
 .middle-content {
     background-color: #fff;
     padding-bottom: 38px;
-    @media (max-width: 768px) {
-        margin-top: 190px;
-    }
 }
 
 .media-padb {
-    padding-bottom: 10px;
-}
-
-.media-padc {
-    padding-bottom: 15px;
+  margin: 20px 0 10px;
+  font-weight: 400;
 }
 
 .form-control-search {
@@ -29,13 +35,23 @@ body {
 }
 
 .nih-top-logo {
-    width: 367px;
-    text-decoration: none !important;
-    color: #555b62;
-    line-height: 1px;
+  display: block;
+  height: 54px;
+  margin-top: -20px;
+  margin-bottom: 28px;
+  width: 367px;
+  text-decoration: none !important;
+  color: #555b62;
+  line-height: 1px;
+  a {
+    color: inherit;
+  }
+  span {
+    display: block;
+  }
 }
 
-a.nih-text {
+.nih-text {
     line-height: 51px;
     font-size: 21px;
     color: #555b62;
@@ -45,11 +61,11 @@ a.nih-text {
         color: #555b62 !important;
     }
 }
-a.nih-text-sm {
-    font-size: 13px;
-    line-height: 0px;
-    margin-top: -9px;
-    color: #555b62;
+.nih-text-sm {
+  font-size: 13px;
+  line-height: 13px;
+  margin-top: -9px;
+  color: #555b62;
     &:hover,
     &:focus {
         text-decoration: none !important;
@@ -63,10 +79,17 @@ a.nih-text-sm {
     float: left;
     padding-right: 5px;
 }
+.top-header a {
+  display: inline-block;
+  line-height: .9em;
+}
 .intranet {
-    font-size: 17px;
+  font-size: 17px;
+  padding-left: 8px;
 }
 .finmanagement {
+  border-right: 1px solid @gray-light;
+  padding-right: 10px;
     font-size: 20px;
     font-weight: bold;
     color: #305c96;
@@ -78,376 +101,169 @@ a.nih-text-sm {
 .mid-background {
     background-color: transparent !important;
 }
-@nav-width: 88%;
+
+
 @nav-indexing: 5;
 @collapsed-nav-width: 100%;
-.nih {
-    width: @nav-width;
+
+.nav-left {
+  background-color: #f3f3f3;
+  > li > a {
     z-index: @nav-indexing;
     height: 97px;
-    background-color: #00509b;
-    background-image: url(../images/nih-off.png);
     background-repeat: no-repeat;
-    background-size: 67px 42px;
-    background-position: 10% center;
-    padding: 29px 0px 0px 89px;
+    background-position: 15px center;
+    padding: 29px 15px 0px 92px;
     color: #565e66;
     font-size: 17px;
-    @media (max-width: @screen-md) {
-        font-size: 1.2em;
-        line-height: 1.1em;
-        background-image: none;
-        width: @collapsed-nav-width;
-        height: 20%;
-        display: block;
-        margin: 0 !important;
-        padding: 8px 0px 6px 74px !important;
+    @media (max-width: @screen-sm-max) {
+      font-size: 1.2em;
+      line-height: 1.1em;
+      background-image: none;
+      width: @collapsed-nav-width;
+      height: 20%;
+      display: block;
+      margin: 0 !important;
+      padding: 8px 0px 6px 15px !important;
     }
-    @media (max-width: 767px) {
-        display: block;
-        margin: 0 !important;
-        padding: 8px 0px 6px 74px !important;
-        width: 100%;
-        background-position: 5% center;
-        background-size: 30px 22px;
-        height: 20%;
+    @media (max-width: @screen-xs-max) {
+      display: block;
+      margin: 0 !important;
+      width: 100%;
+      background-position: 5% center;
+      background-size: 30px 22px;
+      height: 20%;
     }
-    &:first-child {
-        background-color: #f3f3f3;
-        padding: 29px 0px 0px 89px;
-        &:hover,
-        &:focus {
-            background-color: #00509b;
-            background-image: url(../images/nih-on.png);
-            color: #fff;
-            @media (max-width: @screen-md) {
-                font-size: 1.2em;
-                line-height: 1.1em;
-                background-image: none;
-            }
+      &:hover,
+      &:focus {
+        background-color: #00509b;
+        color: #fff;
+        @media (max-width: @screen-md) {
+          font-size: 1.2em;
+          line-height: 1.1em;
+          background-image: none;
         }
+      }
+    }
+  }
+}
+
+.nih {
+    background-image: url(../images/nih-off.png);
+    background-size: 67px 42px;
+    &:hover,
+    &:focus {
+        background-image: url(../images/nih-on.png);
     }
 }
 .resources {
-    width: @nav-width;
-    z-index: @nav-indexing;
-    height: 97px;
-    background-color: #00509b;
     background-image: url(../images/resources-off.png);
-    background-repeat: no-repeat;
     background-size: 41px 51px;
-    background-position: 10% center;
-    padding: 29px 0px 0px 89px;
-    color: #565e66;
-    font-size: 17px;
-     @media (max-width: @screen-md) {
-        font-size: 1.2em;
-        line-height: 1.1em;
-        background-image: none;
-        width: @collapsed-nav-width;
-        height: 20%;
-        display: block;
-        margin: 0 !important;
-        padding: 8px 0px 6px 74px !important;
-    }
-    @media (max-width: 767px) {
-        display: block;
-        margin: 0 !important;
-        padding: 10px;
-        width: 100%;
-    }
-    @media (max-width: 767px) {
-        display: block;
-        margin: 0 !important;
-        padding: 8px 0px 6px 74px !important;
-        width: 100%;
-        background-position: 5% center;
-        background-size: 21px 30px;
-        height: 20%;
-    }
-    &:first-child {
-        background-color: #f3f3f3;
-        padding: 29px 0px 0px 89px;
-        &:hover,
-        &:focus {
-            background-color: #00509b;
-            background-image: url(../images/resources-on.png);
-            color: #fff;
-            @media (max-width: @screen-md) {
-                font-size: 1.2em;
-                line-height: 1.1em;
-                background-image: none;
-            }
-        }
+    &:hover,
+    &:focus {
+        background-image: url(../images/resources-on.png);
     }
 }
 .ofm-staff {
-    width: @nav-width;
-    z-index: @nav-indexing;
-    height: 97px;
-    background-color: #00509b;
     background-image: url(../images/people-on.png);
-    background-repeat: no-repeat;
     background-size: 57px 53px;
-    background-position: 10% center;
-    padding: 29px 0px 0px 89px;
-    color: #565e66;
-    font-size: 17px;
-    @media (max-width: @screen-md) {
-        font-size: 1.2em;
-        line-height: 1.1em;
-        background-image: none;
-        width: @collapsed-nav-width;
-        height: 20%;
-        display: block;
-        margin: 0 !important;
-        padding: 8px 0px 6px 74px !important;
-    }
-    @media (max-width: 767px) {
-        display: block;
-        margin: 0 !important;
-        padding: 8px 0px 6px 74px !important;
-        width: 100%;
-        background-position: 5% center;
-        background-size: 21px 30px;
-        height: 20%;
-    }
-    &:first-child {
-        background-color: #f3f3f3;
-        padding: 29px 0px 0px 89px;
-        &:hover,
-        &:focus {
-            background-color: #00509b;
-            background-image: url(../images/people-off.png);
-            color: #fff;
-            @media (max-width: @screen-md) {
-                font-size: 1.2em;
-                line-height: 1.1em;
-                background-image: none;
-            }
-        }
+    &:hover,
+    &:focus {
+        background-image: url(../images/people-off.png);
     }
 }
 .ofm-managers {
-    width: @nav-width;
-    z-index: @nav-indexing;
-    height: 97px;
-    background-color: #00509b;
     background-image: url(../images/note-off.png);
-    background-repeat: no-repeat;
     background-size: 45px 55px;
-    background-position: 10% center;
-    padding: 29px 0px 0px 89px;
-    color: #565e66;
-    font-size: 17px;
-     @media (max-width: @screen-md) {
-        font-size: 1.2em;
-        line-height: 1.1em;
-        background-image: none;
-        width: @collapsed-nav-width;
-        height: 20%;
-        display: block;
-        margin: 0 !important;
-        padding: 8px 0px 6px 74px !important;
-    }
-    @media (max-width: 767px) {
-        display: block;
-        margin: 0 !important;
-        padding: 8px 0px 6px 74px !important;
-        width: 100%;
-        background-position: 5% center;
-        background-size: 21px 30px;
-        height: 20%;
-    }
-    &:first-child {
-        background-color: #f3f3f3;
-        padding: 29px 0px 0px 89px;
-        &:hover,
-        &:focus {
-            background-color: #00509b;
-            background-image: url(../images/note-on.png);
-            color: #fff;
-            @media (max-width: @screen-md) {
-                font-size: 1.2em;
-                line-height: 1.1em;
-                background-image: none;
-            }
-        }
+    &:hover,
+    &:focus {
+        background-image: url(../images/note-on.png);
     }
 }
 .offices {
-    width: @nav-width;
-    z-index: @nav-indexing;
-    height: 97px;
-    background-color: #00509b;
     background-image: url(../images/offices-off.png);
-    background-repeat: no-repeat;
     background-size: 55px 46px;
-    background-position: 10% center;
-    padding: 29px 0px 0px 89px;
-    color: #565e66;
-    font-size: 17px;
-     @media (max-width: @screen-md) {
-        font-size: 1.2em;
-        line-height: 1.1em;
-        background-image: none;
-        width: @collapsed-nav-width;
-        height: 20%;
-        display: block;
-        margin: 0 !important;
-        padding: 8px 0px 6px 74px !important;
-    }
-    @media (max-width: 767px) {
-        display: block;
-        margin: 0 !important;
-        padding: 8px 0px 6px 74px !important;
-        width: 100%;
-        background-position: 5% center;
-        background-size: 21px 30px;
-        height: 20%;
-    }
-    &:first-child {
-        background-color: #f3f3f3;
-        padding: 29px 0px 0px 89px;
-        &:hover,
-        &:focus {
-            background-color: #00509b;
-            background-image: url(../images/offices-on.png);
-            color: #fff;
-            @media (max-width: @screen-md) {
-                font-size: 1.2em;
-                line-height: 1.1em;
-                background-image: none;
-            }
-        }
+    &:hover,
+    &:focus {
+        background-image: url(../images/offices-on.png);
     }
 }
+
 // Links in navbars
 //
 // Add a class to ensure links outside the navbar nav are colored correctly.
 // former long classes for slider tabs //
+
+@media (min-width: @screen-sm) {
+  .flexslider-wrapper {
+    padding-left: 224px;
+  }
+}
+
+.slider-tabs {
+  a {
+    position: relative;
+    @media (max-width: @screen-xs-max) {
+      display: none;
+      top: 241px;
+      width: 100%;
+      position: absolute;
+      height: 20%;
+      font-size: 24px;
+      margin: 0;
+      padding: 20px;
+      transition: .3s;
+      line-height: 1.8em;
+      z-index: 99;
+    }
+  }
+  a.flex-active:after {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    width: 0;
+    height: 0;
+    margin-left: -20px;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    z-index: 2;
+    @media (max-width: @screen-xs-max) {
+      display: none;
+    }
+  }
+}
+
 .slider-tabs1 {
     background-color: #1f4675;
-    position: relative;
-    display: inline-block;
-    @media (max-width: 767px) {
-        display: none;
-        top: 241px;
-        width: 100%;
-        position: absolute;
-        height: 20%;
-        font-size: 24px;
-        margin: 0;
-        padding: 20px;
-        transition: .3s;
-        line-height: 1.8em;
-        z-index: 99;
-    }
 }
 .slider-tabs1.flex-active::after {
     border-bottom: 20px solid #1f4675;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    width: 0;
-    height: 0;
-    margin-left: -20px;
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    z-index: 2;
-    @media (max-width: @screen-sm) {
-        display: none;
-    }
 }
 .slider-tabs2 {
     background-color: #1d6479;
-    position: relative;
-    display: inline-block;
 }
 .slider-tabs2.flex-active::after {
     border-bottom: 20px solid #1d6479;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    width: 0;
-    height: 0;
-    margin-left: -20px;
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    z-index: 2;
-    @media (max-width: @screen-sm) {
-        display: none;
-    }
 }
 .slider-tabs3 {
     background-color: #2f1954;
-    position: relative;
-    display: inline-block;
 }
 .slider-tabs3.flex-active::after {
     border-bottom: 20px solid #2f1954;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    width: 0;
-    height: 0;
-    margin-left: -20px;
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    z-index: 2;
-    @media (max-width: @screen-sm) {
-        display: none;
-    }
 }
 .slider-tabs4 {
     background-color: #455e6a;
-    position: relative;
-    display: inline-block;
 }
 .slider-tabs4.flex-active::after {
     border-bottom: 20px solid #455e6a;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    width: 0;
-    height: 0;
-    margin-left: -20px;
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    z-index: 2;
-    @media (max-width: @screen-sm) {
-        display: none;
-    }
 }
 .slider-tabs5 {
     background-color: #0a2341;
-    position: relative;
-    display: inline-block;
 }
 .slider-tabs5.flex-active::after {
     border-bottom: 20px solid #0a2341;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    width: 0;
-    height: 0;
-    margin-left: -20px;
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    z-index: 2;
-    @media (max-width: @screen-sm) {
-        display: none;
-    }
 }
 .events_ofm {
     float: left;
@@ -499,17 +315,17 @@ a.nih-text-sm {
 }
 .prev-next-arrow {
     margin-top: 15px;
-    @media (max-width: 768px) {
+  @media (max-width: @screen-xs-max) {
         display: none;
     }
 }
 .prev-next-arrow1 {
     margin-top: 15px;
     margin-left: 153px;
-    @media (max-width: 768px) {
+  @media (max-width: @screen-xs-max) {
         display: none;
     }
-    @media (max-width: 992px) {
+    @media (max-width: @screen-sm-max) {
         margin-left: 0px;
     }
 }
@@ -531,29 +347,18 @@ a.nih-text-sm {
 }
 .navbar-header-bg {
     background-color: #00549f;
-    @media (min-width: 993px) {
+    @media (min-width: @screen-md) {
         display: block;
     }
 }
 .form-width {
     width: 113%;
-    @media (max-width: @screen-md) {
+    @media (max-width: @screen-sm-max) {
         width: 90%;
     }
 }
 .media-padding {
     padding-top: 20px;
-}
-.wrapfix {
-    margin-left: -15px;
-}
-.fluidfix {
-    padding-right: 0px;
-    padding-left: 0px;
-}
-.middlecontentfix {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
 }
 #custom-search-form {
     margin: 0;
@@ -566,40 +371,26 @@ a.nih-text-sm {
 }
 #custom-search-form .search-query {
     width: 290px;
-    padding-right: 3px;
-    padding-right: 4px \9;
-    padding-left: 3px;
-    padding-left: 4px \9;
-    /* IE7-8 doesn't have border-radius, so don't indent the padding */
-    margin-bottom: 0;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    @media (min-width: 200px) and (max-width: 1033px) {
-        width: auto !important;
+    padding: 3px 5px;
     }
-    }
-#custom-search-form button {
+#custom-search-form input[type=submit] {
     border: 0;
     background-image: url(../images/icon-search.png);
-    width: 15px;
-    height: 18px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+    width: 29px;
+    height: 32px;
+    text-indent: -200000em;
     /** belows styles are working good */
-    padding: 2px 5px;
-    margin-top: 2px;
     position: relative;
-    left: -28px;
-    /* IE7-8 doesn't have border-radius, so don't indent the padding */
-    margin-bottom: 0;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    margin-left: -33px;
 }
 .search-query:focus + button {
     z-index: 3;
 }
 //new navbar collapsing much sooner
-@media (max-width: @screen-md) {
+@media (max-width: @screen-sm-max) {
     .navbar-header {
         float: none;
     }
@@ -635,14 +426,20 @@ a.nih-text-sm {
         display: block !important;
     }
     .flexslider-wrapper {
-        padding-left: 0;
+      padding-left: 0;
     }
 }
-@media (max-width: 1200px) {
+@media (max-width: @screen-xs-max) {
+  .flexslider-wrapper {
+    padding-left: 0;
+    padding-bottom: 190px;
+  }
+}
     .nhb-high {
-        padding-right: 0;
+      padding-right: 0;
+      padding-left: 0;
     }
-}
+
 
 .internal-bg {
         background-color: #ffffff;

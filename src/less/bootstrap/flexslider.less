@@ -389,10 +389,7 @@
 // Custom OFM Flexslider CSS
 .flexslider-wrapper {
     position: relative;
-    @media (min-width: @grid-float-breakpoint) {
-        width: 100%;
-        float: right;
-    }
+  padding: 0;
 }
 .flexslider {
     border: 0;
@@ -459,7 +456,6 @@
     height: @tabs-height;
     @media (max-width: 1060px) and (min-width: 992px){
                 width: 100%;
-                margin-left: 18px;
             }
     @media (max-width: @screen-sm) {
                 display: none;
@@ -496,12 +492,12 @@
         }
         &:first-child {
             background-color: @dark-blue;
-            &:hover,
-            &:focus {
+            &:not(.flex-active):hover,
+            &:not(.flex-active):focus {
                 background-color: lighten(@dark-blue, 4%);
             }
             @media (max-width: 992px) {
-           padding: 50px !important;
+//           padding: 50px !important;
         }
         }
         &:nth-child(2) {
@@ -514,12 +510,12 @@
                 font-size: 24px;
                 z-index: 102;
             }
-            &:hover,
-            &:focus {
+          &:not(.flex-active):hover,
+          &:not(.flex-active):focus {
                 background-color: lighten(@teal, 5%);
             }
             @media (max-width: 992px) {
-           padding: 20px !important;
+//           padding: 20px !important;
         }
         }
         &:nth-child(3) {
@@ -532,12 +528,12 @@
                 font-size: 24px;
                 z-index: 101;
             }
-            &:hover,
-            &:focus {
+          &:not(.flex-active):hover,
+          &:not(.flex-active):focus {
                 background-color: lighten(@purple, 8%);
             }
             @media (max-width: 992px) {
-           padding: 20px !important;
+//           padding: 20px !important;
         }
         }
         &:nth-child(4) {
@@ -550,12 +546,12 @@
                 font-size: 24px;
                 z-index: 100;
             }
-            &:hover,
-            &:focus {
+          &:not(.flex-active):hover,
+          &:not(.flex-active):focus {
                 background-color: lighten(@gray-teal, 6%);
             }
             @media (max-width: 992px) {
-           padding: 20px !important;
+//           padding: 20px !important;
         }
         }
         &:nth-child(5) {
@@ -568,12 +564,12 @@
                 font-size: 24px;
                 z-index: 99;
             }
-            &:hover,
-            &:focus {
+          &:not(.flex-active):hover,
+          &:not(.flex-active):focus {
                 background-color: lighten(@navy, 9%);
             }
             @media (max-width: 992px) {
-           padding: 20px !important;
+//           padding: 20px !important;
         }
         }
     }
@@ -640,15 +636,3 @@
     }
 }
 
-@media (min-width: 768px)
-{
-.flexslider-wrapper {
-    width: 102%;
-    float: right;
-    padding-left: 20%;
-    @media (max-width: 991px){
-        padding-left: 0;
-    }
-    }
-
-}

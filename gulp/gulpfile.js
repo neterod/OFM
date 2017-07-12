@@ -50,8 +50,8 @@
             '../src/js/bootstrap/modal.js',
             '../src/js/bootstrap/scrollspy.js',
             '../src/js/bootstrap/tab.js',
-            '../src/js/bootstrap/tooltip.js',
-            '../src/js/bootstrap/popover.js',
+//            '../src/js/bootstrap/tooltip.js',
+//            '../src/js/bootstrap/popover.js',
             '../src/js/bootstrap/transition.js'
         ],
         libBSDest = distJS,
@@ -221,7 +221,7 @@
         });
 
         gulp.watch('../src/less/*.less', ['compilecss']);
-//        gulp.watch('../src/less/bootstrap/**/*.less', ['compilecssbootstrap']);
+//        gulp.watch('../src/less/bootstrap/*.less', ['compilecssbootstrap']);
         gulp.watch(jsSrc, ['jscs', 'lint', 'compressjs']);
         gulp.watch('../src/**/*.html', ['minifyhtml']);
 
@@ -231,13 +231,13 @@
 
 
     gulp.task('default', [
-        'server',
-        'jscs',
-        'compileimages',
-        'compressjs',
-        'compilecss',
-        'minifyhtml'
-       ,'compilecssbootstrap'
+        'server'
+        ,'jscs'
+        ,'compileimages'
+        ,'compressjs'
+        ,'compilecss'
+//        ,'minifyhtml'
+        ,'compilecssbootstrap'
         ,'compresslibraries'
     ]);
 }());
