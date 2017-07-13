@@ -166,7 +166,7 @@
         });
 
     }
-    
+
 
     function breakURLS() {
         $('a').each(function () {
@@ -228,10 +228,13 @@
         controlNav: true,
         manualControls: ".slider-tabs>a",
         directionNav: false,
-        customDirectionNav: $(".custom-direction-nav a")
+        customDirectionNav: $(".custom-direction-nav a"),
 
       });
 
+//      $(".custom-direction-nav a").click(function (e) {
+//        e.preventDefault();
+//      });
         // Init parallax
         if (ieVer > 8 || ieVer === -1) {
             parallaxInit();
@@ -275,5 +278,3 @@
 
 
 }());
-
-
