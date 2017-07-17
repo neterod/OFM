@@ -1,4 +1,5 @@
 // main: main.less
+
 #skip-nav {
   top: -30px;
   left: 3px;
@@ -26,34 +27,46 @@
     font-size: 16px;
     line-height: 1em;
   }
-  #increase-text {}
-  #decrease-text {}
-  #print-page {}
+  #increase-text {
+
+  }
+  #decrease-text {
+
+  }
+  #print-page {
+
+  }
 }
 
-@media (min-width: 992px) {
-  .navbar-collapse.collapse {
+@media (min-width: 992px){
+
+.navbar-collapse.collapse {
     width: 224px;
     position: absolute;
-  }
-}
+    }}
+<<<<<<< .merge_file_iGOudq
+=======
 
-@media (min-width: 992px) {
-  .navbar-collapse.collapse.navbar-internal {
+@media (min-width: 992px){
+
+.navbar-collapse.collapse.navbar-internal {
     width: 100%;
     float: none;
-    .nav>li {
-      width: 20%;
-      display: block;
-      float: left;
-      padding-left: 4px;
+    .nav > li {
+        width: 20%;
+    display: block;
+        float:left;
+        padding-left: 4px;
     }
-  }
-}
+    }}
 
 .nav-bumper {
-  margin-top: 53px;
-  @media (max-width: @screen-sm-max) {
-    margin-top: 0px;
-  }
+    margin-top: 53px;
+    @media (max-width: @screen-sm-max){
+        margin-top: 0px;
+    }
+    
 }
+
+
+>>>>>>> .merge_file_YqYqv6
