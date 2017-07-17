@@ -167,7 +167,6 @@
 
     }
 
-
     function breakURLS() {
         $('a').each(function () {
             var text = $(this).text();
@@ -222,19 +221,16 @@
 
         $('img[src$=".svg"]').convertSVGsToInline();
 
-        $('.flexslider').flexslider({
+      $('.flexslider').flexslider({
         animation: "fade",
         animationLoop: true,
         controlNav: true,
         manualControls: ".slider-tabs>a",
-        directionNav: false,
-        customDirectionNav: $(".custom-direction-nav a"),
+        directionNav: true,
+        customDirectionNav: $(".custom-direction-nav a")
 
       });
 
-//      $(".custom-direction-nav a").click(function (e) {
-//        e.preventDefault();
-//      });
         // Init parallax
         if (ieVer > 8 || ieVer === -1) {
             parallaxInit();
@@ -278,5 +274,3 @@
 
 
 }());
-
-
