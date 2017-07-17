@@ -4,15 +4,59 @@
         background-image: url(../images/slide-placeholder-4.jpg);
     }
 }
-
-a {
-  transition: .3s;
-}
-
 body {
     background-image: url(../images/background_main.png);
     overflow-x: hidden;
 }
+
+.resources_lib {
+    color:#402a5b !important;
+}
+
+.resources-wrapper {
+    background-color:#f4f1f8;
+    padding: 20px;
+}
+
+.service-wrapper {
+    padding: 126px 0 0 0;
+}
+
+.sharepoint-wrapper {
+    padding: 20px;
+}
+
+.sharepoint_resources {
+    color:#005260 !important;
+}
+
+.panel1
+{
+    background-color: #7c5da0 !important;
+}
+
+.panel2
+{
+    background-color: #563480 !important;
+}
+
+.panel3
+{
+    background-color: #442e5d !important;
+}
+
+.panel-primary {
+    border: none;
+}
+
+.panel-heading {
+    border: none;
+}
+
+.internal-lists {
+        padding-top: 15px;
+}
+
 
 h4,
 h5,
@@ -187,6 +231,135 @@ h6 {
         background-image: url(../images/offices-on.png);
     }
 }
+
+.nav-left-internal {
+     background-color: transparent;
+    @media (min-width: @screen-md) {
+     margin-top: 10px;
+    }
+  li > a {
+    z-index: @nav-indexing;
+    height: 97px;
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    padding: 29px 15px 0px 92px;
+    color: white;
+    font-size: 17px;
+    @media (max-width: @screen-sm-max) {
+      font-size: 1.2em;
+      line-height: 1.1em;
+      background-image: none;
+      width: @collapsed-nav-width;
+      height: 20%;
+      display: block;
+      margin: 0 !important;
+      padding: 8px 0px 6px 15px !important;
+    }
+    @media (max-width: @screen-xs-max) {
+      display: block;
+      margin: 0 !important;
+      width: 100%;
+      background-position: 5% center;
+      background-size: 30px 22px;
+      height: 20%;
+    }
+    &:hover,
+    &:focus {
+      color: #fff;
+      @media (max-width: @screen-md) {
+        font-size: 1.2em;
+        line-height: 1.1em;
+        background-image: none;
+      }
+    }
+  }
+}
+
+.nih-internal {
+    background-color: #017ec0;
+    background-image: url(../images/nih-off-internal.png);
+    background-size: 67px 42px;
+    &:hover,
+    &:focus {
+        background-color: #017ec0 !important;
+        margin-top: -15px;
+        height: 112px;
+        @media (max-width: @screen-md) {
+         margin-top: 0;
+         height: auto;
+      }
+       background-image: url(../images/nih-on-internal.png);
+    }
+}
+.resources-internal { 
+    background-color: #005162;
+    background-image: url(../images/resources-off-internal.png);
+    background-size: 41px 51px;
+    &:hover,
+    &:focus {
+        background-color: #005162 !important;
+        margin-top: -15px;
+        height: 112px;
+         @media (max-width: @screen-md) {
+         margin-top: 0;
+         height: auto;
+      }
+        background-image: url(../images/resources-on-internal.png);
+    }
+}
+.ofm-staff-internal {
+    background-color: #442e5d;
+    background-image: url(../images/people-on-internal.png);
+    background-size: 57px 53px;
+    &:hover,
+    &:focus {
+        background-color: #442e5d !important;
+        margin-top: -15px;
+        height: 112px;
+         @media (max-width: @screen-md) {
+         margin-top: 0;
+         height: auto;
+      }
+        background-image: url(../images/people-off-internal.png);
+    }
+}
+.ofm-managers-internal {
+    background-color: #314953;
+    background-image: url(../images/note-off-internal.png);
+    background-size: 45px 55px;
+    &:hover,
+    &:focus {
+        background-color: #314953 !important;
+        margin-top: -15px;
+        height: 112px;
+         @media (max-width: @screen-md) {
+         margin-top: 0;
+         height: auto;
+      }
+        background-image: url(../images/note-on-internal.png);
+    }
+}
+.offices-internal {
+    background-color: #092f54;
+    background-image: url(../images/offices-off-internal.png);
+    background-size: 55px 46px;
+    &:hover,
+    &:focus {
+        background-color: #092f54 !important;
+        margin-top: -15px;
+        height: 112px;
+         @media (max-width: @screen-md) {
+         margin-top: 0;
+         height: auto;
+      }
+        background-image: url(../images/offices-on-internal.png);
+    }
+}
+
+.navbar-internal.collapse.in
+{
+        display: block !important;
+    }
 
 // Links in navbars
 //
