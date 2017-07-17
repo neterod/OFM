@@ -19,7 +19,7 @@ body {
 }
 
 .service-wrapper {
-    padding: 126px 0 0 0;
+    padding: 126px 0 70px 0;
 }
 
 .sharepoint-wrapper {
@@ -618,7 +618,7 @@ h6 {
 }
 
 #accordionMenu {
-  max-width: 300px;
+  //max-width: 300px;
 }
 
 .panel-body {
@@ -649,6 +649,9 @@ h6 {
   display: block;
   padding: 10px 15px;
   text-decoration: none;
+  background-color: #f0f0f0;
+    color: #0065ac;
+    font-weight: bold;
 }
 
 .panel-default>.panel-heading a:after {
@@ -668,15 +671,16 @@ h6 {
 }
 
 .panel-default>.panel-heading a[aria-expanded="true"] {
-  background-color: #eee;
+  background-color: #f0f0f0;
 }
 
 .panel-default>.panel-heading a[aria-expanded="true"]:after {
-  content: "\e113";
+  content: url(../images/down.png);
 }
 
 .panel-default>.panel-heading a[aria-expanded="false"]:after {
-  content: "\e114";
+  content: url(../images/right.png);
+  margin-top: -4px;
 }
 
 .resources_btn {
@@ -690,4 +694,18 @@ margin-left: 52px;
 
 .view-resources-btn {
     margin-left: 24px;
+}
+
+.mini-nav {
+    background-color: #f0f0f0 !important;
+}
+
+.mini {
+    color: black !important;
+    &:hover,
+    &:focus {
+        background-color: #006aa8 !important;
+        color: white !important;
+    }
+        
 }
