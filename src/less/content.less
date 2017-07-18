@@ -1,56 +1,65 @@
 // main: main.less
-
+.jumbotron {
+    &.home1 {
+        background-image: url(../images/slide-placeholder-4.jpg);
+    }
+}
 body {
-  background-image: url(../images/background_main.png);
-
-  background-size: cover;
-  overflow-x: hidden;
+    background-image: url(../images/background_main.png);
+    overflow-x: hidden;
 }
 
 .resources_lib {
-  color: #402a5b !important;
+    color:#402a5b !important;
 }
 
 .resources-wrapper {
-  background-color: #f4f1f8;
-  padding: 20px;
+    background-color:#f4f1f8;
+    padding: 20px;
 }
 
 .service-wrapper {
-  padding: 126px 0 0 0;
+    padding: 126px 0 70px 0;
+    @media (max-width: @screen-md) {
+        padding: 26px 0 70px 0;
+      }
 }
 
 .sharepoint-wrapper {
-  padding: 20px;
+    padding: 20px;
 }
 
 .sharepoint_resources {
-  color: #005260 !important;
+    color:#005260 !important;
 }
 
-.panel1 {
-  background-color: #7c5da0 !important;
+.panel1
+{
+    background-color: #7c5da0 !important;
 }
 
-.panel2 {
-  background-color: #563480 !important;
+.panel2
+{
+    background-color: #563480 !important;
 }
 
-.panel3 {
-  background-color: #442e5d !important;
+.panel3
+{
+    background-color: #442e5d !important;
 }
 
 .panel-primary {
-  border: none;
+    border: none;
 }
 
 .panel-heading {
-  border: none;
+    border: none;
 }
 
 .internal-lists {
-  padding-top: 15px;
+        padding-top: 15px;
 }
+
 
 h4,
 h5,
@@ -59,8 +68,8 @@ h6 {
 }
 
 .middle-content {
-  background-color: #fff;
-  padding-bottom: 38px;
+    background-color: #fff;
+    padding-bottom: 38px;
 }
 
 .media-padb {
@@ -69,7 +78,7 @@ h6 {
 }
 
 .form-control-search {
-  display: inline !important;
+        display: inline !important;
 }
 
 .nih-top-logo {
@@ -90,70 +99,63 @@ h6 {
 }
 
 .nih-text {
-  line-height: 51px;
-  font-size: 21px;
-  color: #555b62;
-  &:hover,
-  &:focus {
-    text-decoration: none !important;
-    color: #555b62 !important;
-  }
+    line-height: 51px;
+    font-size: 21px;
+    color: #555b62;
+    &:hover,
+    &:focus {
+        text-decoration: none !important;
+        color: #555b62 !important;
+    }
 }
-
 .nih-text-sm {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 13px;
-  font-weight: 600;
-  font-style: italic;
   margin-top: -9px;
   color: #555b62;
-  &:hover,
-  &:focus {
-    text-decoration: none !important;
-    color: #555b62 !important;
-  }
+    &:hover,
+    &:focus {
+        text-decoration: none !important;
+        color: #555b62 !important;
+    }
 }
-
 .logo-padding {
-  padding: 0 0 20px 0px;
+    padding: 0 0 20px 0px;
 }
-
 .nih-badge {
-  float: left;
-  padding-right: 5px;
+    float: left;
+    padding-right: 5px;
 }
-
-.top-header a span {
+.top-header a {
   display: inline-block;
-  font-size: 20px;
-  line-height: 20px;
+  line-height: .9em;
 }
-
 .intranet {
+  font-size: 17px;
   padding-left: 8px;
 }
-
 .finmanagement {
   border-right: 1px solid @gray-light;
   padding-right: 10px;
-  font-weight: bold;
-  color: #305c96;
-  margin-left: -12px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #305c96;
+    margin-left: -12px;
 }
-
 .top-padding {
-  padding-top: 20px;
+    padding-top: 20px;
+}
+.mid-background {
+    background-color: transparent !important;
 }
 
-.mid-background {
-  background-color: transparent !important;
-}
 
 @nav-indexing: 5;
 @collapsed-nav-width: 100%;
+
 .nav-left {
   background-color: #f3f3f3;
-  >li>a {
+  > li > a {
     z-index: @nav-indexing;
     height: 97px;
     background-repeat: no-repeat;
@@ -193,56 +195,52 @@ h6 {
 }
 
 .nih {
-  background-image: url(../images/nih-off.png);
-  background-size: 67px 42px;
-  &:hover,
-  &:focus {
-    background-image: url(../images/nih-on.png);
-  }
+    background-image: url(../images/nih-off.png);
+    background-size: 67px 42px;
+    &:hover,
+    &:focus {
+        background-image: url(../images/nih-on.png);
+    }
 }
-
 .resources {
-  background-image: url(../images/resources-off.png);
-  background-size: 41px 51px;
-  &:hover,
-  &:focus {
-    background-image: url(../images/resources-on.png);
-  }
+    background-image: url(../images/resources-off.png);
+    background-size: 41px 51px;
+    &:hover,
+    &:focus {
+        background-image: url(../images/resources-on.png);
+    }
 }
-
 .ofm-staff {
-  background-image: url(../images/people-on.png);
-  background-size: 57px 53px;
-  &:hover,
-  &:focus {
-    background-image: url(../images/people-off.png);
-  }
+    background-image: url(../images/people-on.png);
+    background-size: 57px 53px;
+    &:hover,
+    &:focus {
+        background-image: url(../images/people-off.png);
+    }
 }
-
 .ofm-managers {
-  background-image: url(../images/note-off.png);
-  background-size: 45px 55px;
-  &:hover,
-  &:focus {
-    background-image: url(../images/note-on.png);
-  }
+    background-image: url(../images/note-off.png);
+    background-size: 45px 55px;
+    &:hover,
+    &:focus {
+        background-image: url(../images/note-on.png);
+    }
 }
-
 .offices {
-  background-image: url(../images/offices-off.png);
-  background-size: 55px 46px;
-  &:hover,
-  &:focus {
-    background-image: url(../images/offices-on.png);
-  }
+    background-image: url(../images/offices-off.png);
+    background-size: 55px 46px;
+    &:hover,
+    &:focus {
+        background-image: url(../images/offices-on.png);
+    }
 }
 
 .nav-left-internal {
-  background-color: transparent;
-  @media (min-width: @screen-md) {
-    margin-top: 10px;
-  }
-  li>a {
+     background-color: transparent;
+    @media (min-width: @screen-md) {
+     margin-top: 10px;
+    }
+  li > a {
     z-index: @nav-indexing;
     height: 97px;
     background-repeat: no-repeat;
@@ -281,98 +279,127 @@ h6 {
 }
 
 .nih-internal {
-  background-color: #017ec0;
-  background-image: url(../images/nih-off-internal.png);
-  background-size: 67px 42px;
-  &:hover,
-  &:focus {
-    background-color: #017ec0 !important;
-    margin-top: -15px;
-    height: 112px;
-    @media (max-width: @screen-md) {
-      margin-top: 0;
-      height: auto;
+    background-color: #017ec0;
+    background-image: url(../images/nih-off-internal.png);
+    background-size: 67px 42px;
+    &:hover,
+    &:focus {
+        background-color: #017ec0 !important;
+        margin-top: -15px;
+        height: 112px;
+        @media (max-width: @screen-md) {
+         margin-top: 0;
+         height: auto;
+      }
+       background-image: url(../images/nih-on-internal.png);
     }
-    background-image: url(../images/nih-on-internal.png);
-  }
 }
-
-.resources-internal {
-  background-color: #005162;
-  background-image: url(../images/resources-off-internal.png);
-  background-size: 41px 51px;
-  &:hover,
-  &:focus {
-    background-color: #005162 !important;
-    margin-top: -15px;
-    height: 112px;
-    @media (max-width: @screen-md) {
-      margin-top: 0;
-      height: auto;
+.resources-internal { 
+    background-color: #005162;
+    background-image: url(../images/resources-off-internal.png);
+    background-size: 41px 51px;
+    &:hover,
+    &:focus {
+        background-color: #005162 !important;
+        margin-top: -15px;
+        height: 112px;
+         @media (max-width: @screen-md) {
+         margin-top: 0;
+         height: auto;
+      }
+        background-image: url(../images/resources-on-internal.png);
     }
-    background-image: url(../images/resources-on-internal.png);
-  }
 }
-
 .ofm-staff-internal {
-  background-color: #442e5d;
-  background-image: url(../images/people-on-internal.png);
-  background-size: 57px 53px;
-  &:hover,
-  &:focus {
-    background-color: #442e5d !important;
-    margin-top: -15px;
-    height: 112px;
-    @media (max-width: @screen-md) {
-      margin-top: 0;
-      height: auto;
+    background-color: #442e5d;
+    background-image: url(../images/people-on-internal.png);
+    background-size: 57px 53px;
+    &:hover,
+    &:focus {
+        background-color: #442e5d !important;
+        margin-top: -15px;
+        height: 112px;
+         @media (max-width: @screen-md) {
+         margin-top: 0;
+         height: auto;
+      }
+        background-image: url(../images/people-off-internal.png);
     }
-    background-image: url(../images/people-off-internal.png);
-  }
 }
-
 .ofm-managers-internal {
-  background-color: #314953;
-  background-image: url(../images/note-off-internal.png);
-  background-size: 45px 55px;
-  &:hover,
-  &:focus {
-    background-color: #314953 !important;
-    margin-top: -15px;
-    height: 112px;
-    @media (max-width: @screen-md) {
-      margin-top: 0;
-      height: auto;
+    background-color: #314953;
+    background-image: url(../images/note-off-internal.png);
+    background-size: 45px 55px;
+    &:hover,
+    &:focus {
+        background-color: #314953 !important;
+        margin-top: -15px;
+        height: 112px;
+         @media (max-width: @screen-md) {
+         margin-top: 0;
+         height: auto;
+      }
+        background-image: url(../images/note-on-internal.png);
     }
-    background-image: url(../images/note-on-internal.png);
-  }
 }
-
 .offices-internal {
-  background-color: #092f54;
-  background-image: url(../images/offices-off-internal.png);
-  background-size: 55px 46px;
-  &:hover,
-  &:focus {
-    background-color: #092f54 !important;
-    margin-top: -15px;
-    height: 112px;
-    @media (max-width: @screen-md) {
-      margin-top: 0;
-      height: auto;
+    background-color: #092f54;
+    background-image: url(../images/offices-off-internal.png);
+    background-size: 55px 46px;
+    &:hover,
+    &:focus {
+        background-color: #092f54 !important;
+        margin-top: -15px;
+        height: 112px;
+         @media (max-width: @screen-md) {
+         margin-top: 0;
+         height: auto;
+      }
+        background-image: url(../images/offices-on-internal.png);
     }
-    background-image: url(../images/offices-on-internal.png);
+}
+
+.gradient-overlay {
+  position: relative;
+  z-index: 0;
+  &:before {
+    content: '';
+    z-index: -1;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: .3s;
+    background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  }
+  a&:hover:before,
+  a&:focus:before {
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   }
 }
 
-.navbar-internal.collapse.in {
-  display: block !important;
-}
+.navbar-internal.collapse.in
+{
+        display: block !important;
+    }
 
 // Links in navbars
 //
 // Add a class to ensure links outside the navbar nav are colored correctly.
 // former long classes for slider tabs //
+
 @media (min-width: @screen-sm) {
   .flexslider-wrapper {
     padding-left: 224px;
@@ -415,252 +442,217 @@ h6 {
 }
 
 .slider-tabs1 {
-  background-color: #1f4675;
+    background-color: #1f4675;
 }
-
 .slider-tabs1.flex-active::after {
-  border-bottom: 20px solid #1f4675;
+    border-bottom: 20px solid #1f4675;
 }
-
 .slider-tabs2 {
-  background-color: #1d6479;
+    background-color: #1d6479;
 }
-
 .slider-tabs2.flex-active::after {
-  border-bottom: 20px solid #1d6479;
+    border-bottom: 20px solid #1d6479;
 }
-
 .slider-tabs3 {
-  background-color: #2f1954;
+    background-color: #2f1954;
 }
-
 .slider-tabs3.flex-active::after {
-  border-bottom: 20px solid #2f1954;
+    border-bottom: 20px solid #2f1954;
 }
-
 .slider-tabs4 {
-  background-color: #455e6a;
+    background-color: #455e6a;
 }
-
 .slider-tabs4.flex-active::after {
-  border-bottom: 20px solid #455e6a;
+    border-bottom: 20px solid #455e6a;
 }
-
 .slider-tabs5 {
-  background-color: #0a2341;
+    background-color: #0a2341;
 }
-
 .slider-tabs5.flex-active::after {
-  border-bottom: 20px solid #0a2341;
+    border-bottom: 20px solid #0a2341;
 }
-
 .events_ofm {
-  float: left;
-  margin-top: -27px;
-  margin-left: 11px;
+    float: left;
+    margin-top: -27px;
+    margin-left: 11px;
 }
-
 .calendar-pull {
-  float: left;
+    float: left;
 }
-
 .content-top-pad {
-  padding-top: 20px;
+    padding-top: 20px;
 }
-
 .content-bottom {
-  border-bottom: dotted #d6d6d6;
+    border-bottom: dotted #d6d6d6;
 }
-
 .content-bottom-pad {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
 }
-
 .ofm-announcements {
-  color: #207ac9
+    color: #207ac9
 }
-
 .ofm-events {
-  color: #2c788f
+    color: #2c788f
 }
-
 .ofm-header {
-  font-size: 17px;
-  font-weight: bold;
+    font-size: 17px;
+    font-weight: bold;
 }
-
 .ofm-main-header {
-  color: #257eca;
+    color: #257eca;
 }
-
 .arrow-left {
-  width: 0;
-  height: 0;
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  border-left: 7px solid #286ebe;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid #286ebe;
 }
-
 .arrow-float {
-  float: left;
-  margin-left: 5px;
-  margin-top: -8px;
+    float: left;
+    margin-left: 5px;
+    margin-top: -8px;
 }
-
 .rm {
-  float: left;
+    float: left;
 }
-
 .header-spacing {
-  margin-right: 10px;
+    margin-right: 10px;
 }
-
 .prev-next-arrow {
-  margin-top: 15px;
+    margin-top: 15px;
   @media (max-width: @screen-xs-max) {
-    display: none;
-  }
+        display: none;
+    }
 }
-
 .prev-next-arrow1 {
-  margin-top: 15px;
-  margin-left: 153px;
+    margin-top: 15px;
+    margin-left: 153px;
   @media (max-width: @screen-xs-max) {
-    display: none;
-  }
-  @media (max-width: @screen-sm-max) {
-    margin-left: 0px;
-  }
+        display: none;
+    }
+    @media (max-width: @screen-sm-max) {
+        margin-left: 0px;
+    }
 }
-
 .flex-text {
-  margin-top: 0;
-  font-size: 25px;
-  color: #1f4675;
-  text-align: center;
-  @media (max-width: 768px) {
+    margin-top: 0;
+    font-size: 25px;
+    color: #1f4675;
     text-align: center;
-  }
+    @media (max-width: 768px) {
+        text-align: center;
+    }
 }
-
 .flex-text-sm {
-  font-size: 20px;
-  @media (min-width: 100px) and (max-width: 1100px) {
-    text-align: center;
-    font-size: 13px !important;
-  }
+    font-size: 20px;
+    @media (min-width: 100px) and (max-width: 1100px) {
+        text-align: center;
+        font-size: 13px !important;
+    }
 }
-
 .navbar-header-bg {
-  background-color: #00549f;
-  @media (min-width: @screen-md) {
-    display: block;
-  }
+    background-color: #00549f;
+    @media (min-width: @screen-md) {
+        display: block;
+    }
 }
-
 .form-width {
-  width: 113%;
-  @media (max-width: @screen-sm-max) {
-    width: 90%;
-  }
+    width: 113%;
+    @media (max-width: @screen-sm-max) {
+        width: 90%;
+    }
 }
-
 .media-padding {
-  padding-top: 20px;
+    padding-top: 20px;
 }
-
 #custom-search-form {
-  margin: 0;
-  margin-top: 5px;
-  padding: 0;
-  @media (min-width: 200px) and (max-width: 1033px) {
-    width: auto !important;
-    margin-bottom: 10px;
-  }
+    margin: 0;
+    margin-top: 5px;
+    padding: 0;
+    @media (min-width: 200px) and (max-width: 1033px) {
+        width: auto !important;
+            margin-bottom: 10px;
+    }
 }
-
 #custom-search-form .search-query {
-  width: 290px;
-  padding: 3px 5px;
-}
-
+    width: 290px;
+    padding: 3px 5px;
+    }
 #custom-search-form input[type=submit] {
-  border: 0;
-  background-image: url(../images/icon-search.png);
+    border: 0;
+    background-image: url(../images/icon-search.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-color: transparent;
-  width: 29px;
-  height: 32px;
-  text-indent: -200000em;
-  /** belows styles are working good */
-  position: relative;
-  margin-left: -33px;
+    width: 29px;
+    height: 32px;
+    text-indent: -200000em;
+    /** belows styles are working good */
+    position: relative;
+    margin-left: -33px;
 }
-
-.search-query:focus+button {
-  z-index: 3;
+.search-query:focus + button {
+    z-index: 3;
 }
-
 //new navbar collapsing much sooner
 @media (max-width: @screen-sm-max) {
-  .navbar-header {
-    float: none;
-  }
-  .navbar-left,
-  .navbar-right {
-    float: none !important;
-  }
-  .navbar-toggle {
-    display: block;
-  }
-  .navbar-collapse {
-    border-top: 1px solid transparent;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  }
-  .navbar-fixed-top {
-    top: 0;
-    border-width: 0 0 1px;
-  }
-  .navbar-collapse.collapse {
-    display: none!important;
-  }
-  .navbar-nav {
-    float: none!important;
-  }
-  .navbar-nav>li {
-    float: none;
-  }
-  .navbar-nav>li>a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .collapse.in {
-    display: block !important;
-  }
-  .flexslider-wrapper {
-    padding-left: 0;
-  }
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,
+    .navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in {
+        display: block !important;
+    }
+    .flexslider-wrapper {
+      padding-left: 0;
+    }
 }
-
 @media (max-width: @screen-xs-max) {
   .flexslider-wrapper {
     padding-left: 0;
     padding-bottom: 190px;
   }
 }
+    .nhb-high {
+      padding-right: 0;
+      padding-left: 0;
+    }
 
-.nhb-high {
-  padding-right: 0;
-  padding-left: 0;
-}
 
 .internal-bg {
-  background-color: #ffffff;
+        background-color: #ffffff;
 }
 
 #accordionMenu {
-  max-width: 300px;
+  //max-width: 300px;
 }
 
 .panel-body {
@@ -691,6 +683,9 @@ h6 {
   display: block;
   padding: 10px 15px;
   text-decoration: none;
+  background-color: #f0f0f0;
+    color: #0065ac;
+    font-weight: bold;
 }
 
 .panel-default>.panel-heading a:after {
@@ -710,26 +705,42 @@ h6 {
 }
 
 .panel-default>.panel-heading a[aria-expanded="true"] {
-  background-color: #eee;
+  background-color: #f0f0f0;
 }
 
 .panel-default>.panel-heading a[aria-expanded="true"]:after {
-  content: "\e113";
+  content: url(../images/down.png);
 }
 
 .panel-default>.panel-heading a[aria-expanded="false"]:after {
-  content: "\e114";
+  content: url(../images/right.png);
+  margin-top: -4px;
+  margin-right: -9px;
 }
 
 .resources_btn {
-  background-color: #015061;
-  color: white;
+        background-color: #015061;
+    color: white;
 }
 
 .sharepoint-list {
-  margin-left: 52px;
-}
+margin-left: 52px;
+    }
 
 .view-resources-btn {
-  margin-left: 24px;
+    margin-left: 24px;
+}
+
+.mini-nav {
+    background-color: #f0f0f0 !important;
+}
+
+.mini {
+    color: black !important;
+    &:hover,
+    &:focus {
+        background-color: #006aa8 !important;
+        color: white !important;
+    }
+        
 }
