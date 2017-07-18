@@ -1,12 +1,9 @@
 // main: main.less
-.jumbotron {
-  &.home1 {
-    background-image: url(../images/slide-placeholder-4.jpg);
-  }
-}
 
 body {
   background-image: url(../images/background_main.png);
+
+  background-size: cover;
   overflow-x: hidden;
 }
 
@@ -104,8 +101,10 @@ h6 {
 }
 
 .nih-text-sm {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 13px;
+  font-weight: 600;
+  font-style: italic;
   margin-top: -9px;
   color: #555b62;
   &:hover,
@@ -124,20 +123,19 @@ h6 {
   padding-right: 5px;
 }
 
-.top-header a {
+.top-header a span {
   display: inline-block;
-  line-height: .9em;
+  font-size: 20px;
+  line-height: 20px;
 }
 
 .intranet {
-  font-size: 17px;
   padding-left: 8px;
 }
 
 .finmanagement {
   border-right: 1px solid @gray-light;
   padding-right: 10px;
-  font-size: 20px;
   font-weight: bold;
   color: #305c96;
   margin-left: -12px;

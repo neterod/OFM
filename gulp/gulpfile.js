@@ -190,7 +190,7 @@
     gulp.task('compilecssbootstrap', function () {
         return gulp.src(cssBootstrapSrc)
             .pipe(less({
-                compress: true
+              compress: true
             }))
             .pipe(rename('bootstrap.min.css'))
             .pipe(gulp.dest(cssDest));
@@ -221,7 +221,7 @@
         });
 
         gulp.watch('../src/less/*.less', ['compilecss']);
-//        gulp.watch('../src/less/bootstrap/*.less', ['compilecssbootstrap']);
+        gulp.watch('../src/less/bootstrap/*.less', ['compilecssbootstrap']);
         gulp.watch(jsSrc, ['jscs', 'lint', 'compressjs']);
         gulp.watch('../src/**/*.html', ['minifyhtml']);
 
