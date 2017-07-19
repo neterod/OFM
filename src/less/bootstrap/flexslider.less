@@ -26,7 +26,7 @@
 @flexslider-margin: 0 0 60px;
 @flexslider-bg: #fff;
 @flexslider-border: 4px solid #fff;
-@flexslider-border-radius: 4px;
+@flexslider-border-radius: 0;
 @flexslider-box-shadow-x-axis: 0;
 @flexslider-box-shadow-y-axis: 1px;
 @flexslider-box-shadow-blur: 4px;
@@ -393,6 +393,10 @@
 }
 .flexslider {
     border: 0;
+  background-color: @gray;
+  @media (min-width: @screen-xs) {
+    min-height: 360px;
+  }
     .slides {
         li {
             position: relative;
@@ -623,9 +627,11 @@
     // activated by js
     bottom: (@tabs-height + 30px);
     z-index: 10;
+    pointer-events: none;
     a {
         text-align: center;
         width: @direction-nav-width;
+        pointer-events: all;
         &:first-child {
             float: left;
             background-image: url(../images/min-arrow-left.png) no-repeat;

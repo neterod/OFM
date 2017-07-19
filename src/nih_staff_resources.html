@@ -1,81 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Bootstrap Theme Simply Me</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-  body {
-      font: 20px Montserrat, sans-serif;
-      line-height: 1.8;
-      color: #f5f6f7;
-  }
-  p {font-size: 16px;}
-  .margin {margin-bottom: 45px;}
-  .bg-1 { 
-      background-color: #fff; /* Green */
-      color: #505050;
-  }
-  .bg-2 { 
-      background-color: #f4f1f8; /* Dark Blue */
-      color: #ffffff;
-      margin:auto;
-  }
-  .bg-3 { 
-      background-color: #ffffff; /* White */
-      color: #555555;
-  }
-  .bg-4 { 
-      background-color: #2f2f2f; /* Black Gray */
-      color: #fff;
-  }
-  .container-fluid {
-      padding-top: 70px;
-      padding-bottom: 70px;
-  }
-  </style>
-</head>
-<body><a href="#content" id="skip-nav">Skip Navigation Links</a>
-    <div class="container-fluid header-padding">
-        <div class="row top-padding">
-            <div class="col-md-12 col-md-offset-8 top-header"><a class="finmanagement" href="index.html">Office of Financial Management</a> | <a class="intranet" href="contact.html">INTRANET</a></div>
-        </div>
-        <div class="row">
-            <div class="col-md-8 logo-padding">
-                <a href="#"><img class="nih-badge" src="images/nih-badge.jpg" width="88px" height="55px" alt="NIH Logo"></a>
-                <div class="nih-top-logo"><a href="#" class="nih-text">National Institutes of Health</a> <a href="#" class="nih-text-sm"><i>Office of Management</i></a></div>
-            </div>
-            <div class="col-md-4">
-                <form id="custom-search-form" class="form-search form-horizontal pull-right">
-                    <div class="input-append span12">
-                        <input type="text" class="form-control form-control-search search-query mac-style" placeholder="Search">
-                        <button type="submit" class="btn"><i class="icon-search"></i></button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 
-<!-- First Container -->
-<div class="container-fluid bg-1 text-center">
-  <div class="row">
-                
-                <div class="col-md-3 col-md-offset-1"><div class="pull-left header-spacing">
-                        <img src="images/horn.jpg" alt="DNA">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>NETE Starter Template</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- NOTE: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="css/ie8.css">
+    <script src="js/ie/ie.min.js"></script>
+  <![endif]-->
+</head>
+
+<body><a href="#content" id="skip-nav">Skip Navigation Links</a>
+
+  <div class="container-fluid branding">
+    <div class="row">
+      <div class="col-sm-6 logo">
+        <a href="#" class="nih-top-logo">
+          <img class="nih-badge" src="images/nih-logo.svg" alt="NIH Logo">
+          <span class="nih-text">National Institutes of Health</span>
+          <span class="nih-text-sm">Office of Management</span>
+        </a>
+      </div>
+
+      <div class="col-sm-6 search text-right">
+        <div class="text-right top-header">
+          <a href="/">
+            <span class="finmanagement">Office of Financial Management</span>
+            <span class="intranet">INTRANET</span>
+          </a>
+        </div>
+        <form id="custom-search-form" class="form-search form-horizontal">
+          <input type="text" class="form-control form-control-search search-query mac-style" placeholder="Search">
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+
+    <div class="navbar navbar-default-middle" role="navigation">
+    <div class="container-fluid nhb-high">
+      <div class="nav-wrapper">
+        <div class="navbar-header navbar-header-bg">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+        </div>
+        <div class="navbar-collapse collapse navbar-internal">
+          <ul class="nav navbar-nav nav-left-internal">
+            <li>
+              <a class="nih-internal gradient-overlay" href="#">NIH Staff Resources</a>
+            </li>
+            <li><a class="resources-internal gradient-overlay" href="#">General Resources</a></li>
+            <li><a class="ofm-staff-internal gradient-overlay" href="#">OFM Staff</a></li>
+            <li><a class="ofm-managers-internal gradient-overlay" href="#">OFM Managers</a></li>
+            <li><a class="offices-internal gradient-overlay" href="#">Offices and Divisions</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+    <div id="content" class="internal-bg nav-bumper">
+        <div class="service-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-md-12"><div class="pull-left header-spacing">
+                        <img src="images/tools.jpg" alt="Tools">
                     </div><h1 class="ofm-main-header">Service Areas</h1></div>
             </div>
             <div class="row">
-                
-                <div class="row middle-content middlecontentfix" >
-                <div class="col-md-5 col-md-offset-1 content-top-pad">
+
+                <div class="row">
+                <div class="col-md-6 content-top-pad">
                     <div class="media media-bottom">
                         <div class="pull-left">
-                            <img class="content-bottom-pad" src="images/writer.jpg" alt="I write stuff">
+                            <img class="content-bottom-pad" src="images/internal_1.jpg" alt="I write stuff">
                         </div>
                         <div class="media-body">
                             <h3 class="media-heading"><a href="#">OFM-NBS Collaboration</a></h3>
@@ -85,7 +95,7 @@
                     </div>
                     <div class="media media-bottom media-padding">
                         <div class="pull-left">
-                            <img class="content-bottom-pad" src="images/data.jpg" alt="DATA">
+                            <img class="content-bottom-pad" src="images/internal_2.jpg" alt="DATA">
                         </div>
                         <div class="media-body">
                             <h3 class="media-heading"><a href="#">NIH CAP Support</a></h3>
@@ -95,7 +105,7 @@
                     </div>
                     <div class="media media-bottom media-padding">
                         <div class="pull-left">
-                            <img class="content-bottom-pad" src="images/data.jpg" alt="DATA">
+                            <img class="content-bottom-pad" src="images/internal_3.jpg" alt="DATA">
                         </div>
                         <div class="media-body">
                             <h3 class="media-heading"><a href="#">OMB Max Implementation</a></h3>
@@ -105,7 +115,7 @@
                     </div>
                     <div class="media media-bottom media-padding">
                         <div class="pull-left">
-                            <img src="images/dna.jpg" alt="DNA">
+                            <img src="images/internal_4.jpg" alt="DNA">
                         </div>
                         <div class="media-body">
                             <h3 class="media-heading"><a href="#">IAA Process Improvement</a></h3>
@@ -114,12 +124,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-5 content-top-pad">
-                    
+                <div class="col-md-6 content-top-pad">
+
                     <br>
                     <div class="media media-bottom">
                         <div class="pull-left">
-                            <img class="content-bottom-pad" src="images/writer.jpg" alt="I write stuff">
+                            <img class="content-bottom-pad" src="images/internal_5.jpg" alt="I write stuff">
                         </div>
                         <div class="media-body">
                             <h3 class="media-heading"><a href="#">CAN Change Workgroup</a></h3>
@@ -129,7 +139,7 @@
                     </div>
                     <div class="media media-bottom media-padding">
                         <div class="pull-left">
-                            <img class="content-bottom-pad" src="images/data.jpg" alt="DATA">
+                            <img class="content-bottom-pad" src="images/internal_6.jpg" alt="DATA">
                         </div>
                         <div class="media-body">
                             <h3 class="media-heading"><a href="#">Electronic Vendor Invoicing Program</a></h3>
@@ -139,7 +149,7 @@
                     </div>
                     <div class="media media-bottom media-padding">
                         <div class="pull-left">
-                            <img class="content-bottom-pad" src="images/data.jpg" alt="DATA">
+                            <img class="content-bottom-pad" src="images/internal_7.jpg" alt="DATA">
                         </div>
                         <div class="media-body">
                             <h3 class="media-heading"><a href="#">Vendor Maintenance Tracking System</a></h3>
@@ -150,91 +160,73 @@
                 </div>
             </div>
             </div>
-</div>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
-    </ul>
-  </div>
-</nav>
-<!-- Second Container -->
-<div class="container-fluid bg-2 text-center">
-  <div class="row">
-                
-                <div class="col-md-3 col-md-offset-1"><div class="pull-left header-spacing">
-                        <img src="images/horn.jpg" alt="DNA">
-                    </div><h1 class="ofm-main-header">Resources Library</h1></div>
+        </div>
+        </div>
+        <div class="resources-wrapper">
+        <div class="container-fluid">
+            <div class="row" style="">
+
+                <div class="col-md-12"><div class="pull-left header-spacing">
+                        <img src="images/books.jpg" alt="Resources">
+                    </div><h1 class="ofm-main-header resources_lib">Resources Library</h1></div>
             </div>
             <div class="row">
-                
-                <div class="col-md-9 col-md-offset-1">
-                    <div class="row">
-                
-                <div class="row middle-content middlecontentfix" >
+
+                <div class="row" >
                 <div class="col-md-4 content-top-pad">
                   <div class="panel panel-primary">
-  <div class="panel-heading">Category 1</div>
+  <div class="panel-heading panel1">Category 1</div>
   <div class="panel-body">
     <ul>
-        <li>Link one</li>  
-        <li>Link two</li>
-        <li>Link three</li>
+        <li class="internal-lists"><a href="#">Link one</a></li>
+        <li class="internal-lists"><a href="#">Link two</a></li>
+        <li class="internal-lists"><a href="#">Link three</a></li>
     </ul>
   </div>
-</div> 
+</div>
                 </div>
                 <div class="col-md-4 content-top-pad">
                     <div class="panel panel-primary">
-  <div class="panel-heading">Category 2</div>
+  <div class="panel-heading panel2">Category 2</div>
   <div class="panel-body">
     <ul>
-        <li>Link one</li>  
-        <li>Link two</li>
-        <li>Link three</li>
+        <li class="internal-lists"><a href="#">Link one</a></li>
+        <li class="internal-lists"><a href="#">Link two</a></li>
+        <li class="internal-lists"><a href="#">Link three</a></li>
     </ul>
   </div>
 </div>
                 </div>
                     <div class="col-md-4 content-top-pad">
                     <div class="panel panel-primary">
-  <div class="panel-heading">Category 3</div>
+  <div class="panel-heading panel3">Category 3</div>
   <div class="panel-body">
     <ul>
-        <li>Link one</li>  
-        <li>Link two</li>
-        <li>Link three</li>
+        <li class="internal-lists"><a href="#">Link one</a></li>
+        <li class="internal-lists"><a href="#">Link two</a></li>
+        <li class="internal-lists"><a href="#">Link three</a></li>
     </ul>
   </div>
 </div>
                 </div>
             </div>
             </div>
-                
-                </div>
+        </div>
             </div>
-</div>
+        <div class="sharepoint-wrapper">
+        <div class="container-fluid">
+            <div class="row">
 
-<!-- Third Container (Grid) -->
-<div class="container-fluid bg-3">    
-  <div class="row">
-                
                 <div class="col-md-12"><div class="pull-left header-spacing">
-                        <img src="images/horn.jpg" alt="DNA">
-                    </div><h1 class="ofm-main-header">Sharepoint & Website Resources</h1></div>
+                        <img src="images/computer.jpg" alt="Computer">
+                    </div><h1 class="ofm-main-header sharepoint_resources">Sharepoint &amp; Website Resources</h1></div>
             </div>
             <div class="row">
-                
-                <div class="row middle-content middlecontentfix" >
+
+                <div class="row">
                 <div class="col-md-12 content-top-pad sharepoint-list">
                      <ul>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>  
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
         <li>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
         <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</li>
                          <li>ut aliquip ex ea commodo consequat</li>
@@ -246,10 +238,10 @@
                 </div>
             </div>
             </div>
-</div>
-
-<!-- Footer -->
-<div class="internal_footer" role="navigation">
+    </div>
+        </div>
+    </div>
+    <div class="internal_footer" role="navigation">
         <div class="container-fluid footer-fix">
             <div class="row">
                 <div class="col-md-12">
@@ -282,6 +274,6 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.min.js"></script>
-
 </body>
+
 </html>

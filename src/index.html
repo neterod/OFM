@@ -23,26 +23,25 @@
   <a href="#content" id="skip-nav">Skip Navigation Links</a>
 
   <div class="container-fluid branding">
-    <div class="row top-padding">
-      <div class="col-md-12 text-right top-header">
-        <a href="/">
-          <span class="finmanagement">Office of Financial Management</span>
-          <span class="intranet">INTRANET</span>
-        </a>
-      </div>
-    </div>
     <div class="row">
-      <div class="col-md-6 logo">
+      <div class="col-sm-6 logo">
         <a href="#" class="nih-top-logo">
-          <img class="nih-badge" src="images/nih-badge.jpg" alt="NIH Logo">
+          <img class="nih-badge" src="images/nih-logo.svg" alt="NIH Logo">
           <span class="nih-text">National Institutes of Health</span>
           <span class="nih-text-sm">Office of Management</span>
         </a>
       </div>
 
-      <div class="col-md-6 search text-right">
+      <div class="col-sm-6 search text-right">
+        <div class="text-right top-header">
+          <a href="/">
+            <span class="finmanagement">Office of Financial Management</span>
+            <span class="intranet">INTRANET</span>
+          </a>
+        </div>
         <form id="custom-search-form" class="form-search form-horizontal">
-          <input type="text" class="form-control form-control-search search-query mac-style" placeholder="Search">
+          <label for="search-text" class="hidden">Search Term(s)</label>
+          <input type="text" class="form-control form-control-search search-query mac-style" id="search-text" placeholder="Search">
           <input type="submit" value="Submit">
         </form>
       </div>
@@ -63,19 +62,26 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav nav-left">
             <li>
-              <a class="nih" href="#">NIH Staff Resources</a>
+              <a class="nih" href="#"><img src="images/nih.svg" alt="">NIH Staff Resources</a>
             </li>
-            <li><a class="resources" href="#">General Resources</a></li>
-            <li><a class="ofm-staff" href="#">OFM Staff</a></li>
-            <li><a class="ofm-managers" href="#">OFM Managers</a></li>
-            <li><a class="offices" href="#">Offices and Divisions</a>
-            <ul>
-              <li><a href="">Program Management</a></li>
-              <li><a href="">Financial Reporting</a></li>
-              <li><a href="">Policy and Quality</a></li>
-              <li><a href="">Financial Operations</a></li>
-              <li><a href="">Central Services and Business Operations</a></li>
-            </ul>
+            <li>
+              <a class="resources" href="#"><img src="images/resources.svg" alt="">General Resources</a>
+            </li>
+            <li>
+              <a class="ofm-staff" href="#"><img src="images/staff.svg" alt="">OFM Staff</a>
+            </li>
+            <li>
+              <a class="ofm-managers" href="#"><img src="images/managers.svg" alt="">OFM Managers</a>
+            </li>
+            <li>
+              <a class="offices" href="#"><img src="images/org.svg" alt="">Offices and Divisions</a>
+              <ul>
+                <li><a href="">Program Management</a></li>
+                <li><a href="">Financial Reporting</a></li>
+                <li><a href="">Policy and Quality</a></li>
+                <li><a href="">Financial Operations</a></li>
+                <li><a href="">Central Services and Business Operations</a></li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -92,7 +98,7 @@
             <div class="container-fluid ">
               <div class="row">
                 <div class="col-md-12">
-                  <h1 class="flex-text"><a href="">OFM-NBS Collaboration</a></h1>
+                  <h2 class="flex-text"><a href="">OFM-NBS Collaboration</a></h2>
                   <p class="flex-text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p>
                 </div>
               </div>
@@ -102,7 +108,7 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col-md-12">
-                  <h1 class="flex-text"><a href="">IAA Process Improvement</a></h1>
+                  <h2 class="flex-text"><a href="">IAA Process Improvement</a></h2>
                   <p class="flex-text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p>
                 </div>
               </div>
@@ -112,7 +118,7 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col-md-12">
-                  <h1 class="flex-text"><a href="">CAN Change Workgroup</a></h1>
+                  <h2 class="flex-text"><a href="">CAN Change Workgroup</a></h2>
                   <p class="flex-text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p>
                 </div>
               </div>
@@ -122,7 +128,7 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col-md-12">
-                  <h1 class="flex-text"><a href="">OMB Max Implementation</a></h1>
+                  <h2 class="flex-text"><a href="">OMB Max Implementation</a></h2>
                   <p class="flex-text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p>
                 </div>
               </div>
@@ -132,7 +138,7 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col-md-12">
-                  <h1>Electronic Vendor Invoicing Program</h1>
+                  <h2 class="flex-text">Electronic Vendor Invoicing Program</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p>
                 </div>
               </div>
@@ -141,8 +147,8 @@
         </ul>
       </div>
       <div class="custom-direction-nav">
-        <a href="#" class="flex-prev"><img class="prev-next-arrow1" src="images/min-arrow-left.png"></a>
-        <a href="#" class="flex-next"><img class="prev-next-arrow" src="images/min-arrow-right.png"></a>
+        <a href="#" class="flex-prev"><img class="prev-next-arrow1" src="images/min-arrow-left.png" alt="arrow left"></a>
+        <a href="#" class="flex-next"><img class="prev-next-arrow" src="images/min-arrow-right.png" alt="arrow right"></a>
       </div>
       <div class="slider-tabs">
         <a class="slider-tabs1" href="#">OFM-NBS Collaboration</a>
@@ -158,40 +164,37 @@
         <div class="col-md-8 content-top-pad">
           <h2 class="ofm-main-header"><img src="images/horn.jpg" alt="DNA"> OFM Announcements</h2>
           <div class="announcements">
-            <div class="media media-bottom content-bottom">
-              <div class="pull-left">
-                <img class="content-bottom-pad" src="images/writer.jpg" alt="I write stuff">
+            <div class="media">
+              <div class="pull-left media-pic">
+                <img src="images/writer.jpg" alt="I write stuff">
               </div>
               <div class="media-body">
                 <h3 class="media-heading"><a href="#">Announcement Title Number One</a></h3>
-                <p><i>February 26, 2017</i><br>
-                  <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  <br><br><a class="rm" href="#">Read More</a></p>
-                <div class="arrow-left arrow-float"></div>
+                <p><i>February 26, 2017</i></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                <p><a href="#">Read More <span class="arrow-left"></span></a></p>
               </div>
             </div>
-            <div class="media media-bottom content-bottom media-padding">
-              <div class="pull-left">
-                <img class="content-bottom-pad" src="images/data.jpg" alt="DATA">
+            <div class="media">
+              <div class="pull-left media-pic">
+                <img src="images/data.jpg" alt="DATA">
               </div>
               <div class="media-body">
                 <h3 class="media-heading"><a href="#">Announcement Title Number Two</a></h3>
-                <p><i>February 26, 2017</i><br>
-                  <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  <br><br><a class="rm" href="#">Read More</a></p>
-                <div class="arrow-left arrow-float"></div>
+                <p><i>February 26, 2017</i></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                <p><a href="#">Read More <span class="arrow-left"></span></a></p>
               </div>
             </div>
-            <div class="media media-bottom media-padding">
-              <div class="pull-left">
+            <div class="media">
+              <div class="pull-left media-pic">
                 <img src="images/dna.jpg" alt="DNA">
               </div>
               <div class="media-body">
                 <h3 class="media-heading"><a href="#">Announcement Title Number Three</a></h3>
-                <p><i>February 26, 2017</i><br>
-                  <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  <br><br><a class="rm" href="#">Read More</a></p>
-                <div class="arrow-left arrow-float"></div>
+                <p><i>February 26, 2017</i></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                <p><a href="#">Read More <span class="arrow-left"></span></a></p>
               </div>
             </div>
           </div>
