@@ -20,7 +20,10 @@ a {
 }
 
 .service-wrapper {
-  padding: 126px 0 0 0;
+  padding: 126px 0 70px 0;
+  @media (max-width: @screen-md) {
+    padding: 26px 0 70px 0;
+  }
 }
 
 .sharepoint-wrapper {
@@ -708,16 +711,23 @@ h6 {
 
 #custom-search-form input[type=submit] {
   border: 0;
-  background-image: url(../images/icon-search.png);
+  background-image: url(../images/search-icon.svg);
+  background-size: 29px 22px;
   background-position: center center;
   background-repeat: no-repeat;
   background-color: transparent;
   width: 29px;
-  height: 32px;
+  height: 30px;
   text-indent: -200000em;
-  /** belows styles are working good */
   position: relative;
   margin-left: -33px;
+  transition: .3s;
+}
+
+#custom-search-form .search-query:focus ~input[type=submit],
+#custom-search-form input[type=submit]:hover,
+#custom-search-form input[type=submit]:focus {
+  background-image: url(../images/search-icon-blue.svg);
 }
 
 .search-query:focus+button {
