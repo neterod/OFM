@@ -1,4 +1,4 @@
-(function () {
++(function ($) {
     'use strict';
 
     var isMobile = false,
@@ -21,7 +21,7 @@
     }
 
     function MobileCheck() {
-        if (viewport().width < 768) {
+        if (viewport().width < 992) {
             isMobile = true;
         } else {
             isMobile = false;
@@ -106,8 +106,8 @@
 
         $('.navbar ul.navbar-nav li').not('.navbar.footer ul.navbar-nav li').each(function () {
             if ($(this).children('ul').length !== 0) {
-                $(this).children('a').append('<span class="sub-nav">&#9654;</span>');
-                $(this).children('ul').prepend('<li class="sub-nav-back">&#9664; Back</span>');
+              $(this).children('a').append('<span class="sub-nav"><img src="/SiteAssets/images/arrow-right.svg" alt="arrow right"></span>');
+              $(this).children('ul').prepend('<li class="sub-nav-back"><img src="/SiteAssets/images/arrow-left.svg" alt="arrow left"> Back</span>');
             }
         });
 
@@ -211,12 +211,34 @@
         }
     }
 
+    function activeSubmenuLink() {
+      var url = document.location.toString(),
+          sel = '.sidebar-content li a[href*="' + url.split('/').pop().split('#')[0] + '"]',
+          cur;
+
+      // to find active link in the top navigation
+      $('.nav-left-internal > li > a').each( function () {
+
+        cur = $(this).attr('href');
+
+        if (url.indexOf(cur) > 0) {
+          $(this).parent('li').addClass('selected');
+        } else {
+          $(this).removeClass('selected, active');
+        }
+      });
+
+      // to find active link in the left sidebar navigation
+      $(sel).parent('li').addClass('selected').closest('.collapse').addClass('in').siblings('.collapsed').removeClass('collapsed').attr('aria-expanded', 'true');
+    }
+
     $(window).load(function () {
 
         MobileCheck();
         buildNavigation();
         breakURLS();
         addReaderDownloads();
+        activeSubmenuLink();
         $('table').mobileTables();
 
         $('img[src$=".svg"]').convertSVGsToInline();
@@ -228,7 +250,6 @@
         manualControls: ".slider-tabs>a",
         directionNav: true,
         customDirectionNav: $(".custom-direction-nav a")
-
       });
 
         // Init parallax
@@ -273,4 +294,4 @@
     });
 
 
-}());
+}(jQuery));
