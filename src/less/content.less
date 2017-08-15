@@ -96,6 +96,36 @@ body,
     }
   }
 
+  .btn.btn-block {
+    display: table;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 5em;
+    border: 2px solid darken(@brand-primary,8%);
+    border-radius: 0;
+    padding: 0 20px;
+    background-color: transparent;
+    color: darken(@brand-primary,10%);
+    font-size: 18px;
+    line-height: 1.2em;
+    white-space: normal;
+    > * {
+      display: table-cell;
+      vertical-align: middle;
+      height: 5em;
+    }
+    &:hover,
+    &:focus {
+      background-color: darken(@brand-primary,8%);
+      color: #fff;
+      text-decoration: none;
+    }
+    @media (min-width: @grid-float-breakpoint ) {
+      font-size: 21px;
+    }
+  }
+
   .panel-primary {
     border: none;
   }
@@ -106,7 +136,7 @@ body,
 
   .content-wrapper {
     position: relative;
-    padding: 10px 0 30px;
+    padding: 0;
     .main-content ul:not([class]) {
       list-style: none!important;
       padding-left: 0;
@@ -130,7 +160,7 @@ body,
   }
 
   .main-content {
-    padding: 0 15px 15px;
+    padding: 0 15px 0;
     ol,
     ul {
       margin-bottom: 22px;
@@ -329,11 +359,10 @@ body,
       >a>svg,
       >a>img {
         position: absolute;
-        top: 50%;
-        margin-top: -32px;
+        top: 16px;
         left: 15px;
         width: 62px;
-        height: auto;
+        height: 62px;
         fill: @gray-light;
         @media screen and (max-width: @screen-sm-max) {
           display: none;
@@ -509,9 +538,11 @@ body,
             margin-top: -@nav-internal-offset;
             height: @nav-internal-height + @nav-internal-offset;
           }
-          color: #fff;
-          svg {
-            fill: #fff;
+          @media screen and (min-width: @grid-float-breakpoint) {
+            color: #fff;
+            svg {
+              fill: #fff;
+            }
           }
           @media screen and (max-width: @screen-sm-max) {
             font-size: 1.2em;
@@ -659,7 +690,7 @@ body,
       content: "";
       display: block;
       position: absolute;
-      bottom: 100%;
+      top: -20px;
       left: 50%;
       z-index: 2;
       @media screen and (max-width: @screen-xs-max) {
@@ -987,7 +1018,7 @@ body,
         margin: 0;
         padding-left: 0;
         list-style: none!important;
-        font-size: 18px;
+        font-size: 17px;
         li {
           a:visited,
           a {
@@ -1034,7 +1065,7 @@ body,
         }
       }
     }
-    .panel-heading,
+    .panel-heading a,
     .panel-body {
       padding: 0;
       background-color: #f0f0f0;
@@ -1054,16 +1085,17 @@ body,
     .panel-heading+.panel-collapse .panel-body {
       border-top: 0;
     }
-    .panel-default .panel-heading {
-      font-size: 23px;
+    .panel-default .panel-heading a {
+      font-size: 21px;
+      font-weight: 400;
       display: block;
-      padding: 10px 15px;
+      padding: 10px 35px 10px 15px;
       text-decoration: none;
       background-color: #f0f0f0;
       color: @sidebar-blue;
     }
 
-    .panel-default .panel-heading {
+    .panel-default .panel-heading a {
 //      position: absolute;
 //      width: 2em;
 //      height: 1.8em;
@@ -1074,18 +1106,18 @@ body,
       background-repeat: no-repeat;
     }
 
-    .panel-default .panel-heading[aria-expanded="false"] {
+    .panel-default .panel-heading a[aria-expanded="false"] {
       background-image: url(/SiteAssets/images/arrow-right.png);
     }
-    .panel-default .panel-heading:hover,
-    .panel-default .panel-heading[aria-expanded="true"] {
+    .panel-default .panel-heading a:hover,
+    .panel-default .panel-heading h4 a[aria-expanded="true"] {
       background-color: @sidebar-blue;
       color: #fff;
     }
-    .panel-default .panel-heading:hover {
+    .panel-default .panel-heading a:hover {
       background-image: url(/SiteAssets/images/arrow-right-white.png);
     }
-    .panel-default .panel-heading[aria-expanded="true"] {
+    .panel-default .panel-heading a[aria-expanded="true"] {
       background-image: url(/SiteAssets/images/arrow-down-white.png);
     }
   }
@@ -1115,10 +1147,11 @@ body,
   *  added by Addisu
   */
 
-  .nav-left-internal>li {
-    float:left;
+  @media screen and (min-width: @grid-float-breakpoint) {
+    .nav-left-internal>li {
+      float:left;
+    }
   }
-
   .bulleted {
     list-style-type: inherit;
   }
@@ -1133,4 +1166,8 @@ body,
     background-color: #185364 ;
     color: white;
   }
+}
+
+body #s4-bodyContainer{
+  min-width: 0!important;
 }

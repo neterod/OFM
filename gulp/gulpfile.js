@@ -199,9 +199,9 @@
     gulp.task('minifyhtml', function () {
         return gulp.src('../src/*.html')
             .pipe(nunjucks.compile())
-            .pipe(htmlmin({
-                collapseWhitespace: true
-            }))
+//            .pipe(htmlmin({
+//                collapseWhitespace: true
+//            }))
             .pipe(gulp.dest(distDir));
     });
 
@@ -236,7 +236,7 @@
         ,'compileimages'
         ,'compressjs'
         ,'compilecss'
-//        ,'minifyhtml'
+        ,'minifyhtml'
         ,'compilecssbootstrap'
         ,'compresslibraries'
     ]);

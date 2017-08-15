@@ -239,7 +239,7 @@
         breakURLS();
         addReaderDownloads();
         activeSubmenuLink();
-        $('table').mobileTables();
+        $('.mobile-table').mobileTables();
 
         $('img[src$=".svg"]').convertSVGsToInline();
 
