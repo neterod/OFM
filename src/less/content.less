@@ -137,6 +137,7 @@ body,
   .content-wrapper {
     position: relative;
     padding: 0;
+    .main-content ul:not([type]),
     .main-content ul:not([class]) {
       list-style: none!important;
       padding-left: 0;
@@ -154,6 +155,33 @@ body,
           vertical-align: middle;
           left: 10px;
           top: .5em;
+        }
+      }
+    }
+    .main-content ul {
+      &.blue-bullets {
+        >li:before {
+          background-color: #017cbd;
+        }
+      }
+      &.teal-bullets {
+        >li:before {
+          background-color: #005162;;
+        }
+      }
+      &.purple-bullets {
+        >li:before {
+          background-color: lighten(@purple,21%);
+        }
+      }
+      &.gray-bullets {
+        >li:before {
+          background-color: #314953;
+        }
+      }
+      &.navy-bullets {
+        >li:before {
+          background-color: lighten(#092f54,6%);
         }
       }
     }
@@ -265,8 +293,13 @@ body,
     span {
       display: block;
     }
-    @media screen and (min-width: @screen-sm) {
-  //    margin-bottom: 28px;
+    @media (max-width: @grid-float-breakpoint ) {
+      img,
+      svg {
+        width: 66px;
+        height: 52px;
+        margin-right: 3px;
+      }
     }
   }
 
@@ -279,6 +312,10 @@ body,
     &:focus {
       text-decoration: none !important;
       color: #555b62 !important;
+    }
+    @media (max-width: @grid-float-breakpoint ) {
+      line-height: 50px;
+      font-size: 17px;
     }
   }
 
@@ -293,6 +330,11 @@ body,
     &:focus {
       text-decoration: none !important;
       color: #555b62 !important;
+    }
+    @media (max-width: @grid-float-breakpoint ) {
+      font-size: 12px;
+      line-height: 5px;
+      margin-top: -11px;
     }
   }
 
@@ -321,6 +363,9 @@ body,
       display: inline-block;
       font-size: 20px;
       line-height: 20px;
+      @media (max-width: @grid-float-breakpoint ) {
+        font-size: 16px;
+      }
     }
     @media screen and (min-width: @screen-sm) {
       padding-top: 12px;
@@ -332,11 +377,13 @@ body,
   }
 
   .finmanagement {
-    border-right: 1px solid @gray-light;
-    padding-right: 10px;
     font-weight: bold;
     color: #305c96;
     margin-left: -12px;
+    @media (min-width: @grid-float-breakpoint ) {
+      border-right: 1px solid @gray-light;
+      padding-right: 10px;
+    }
   }
 
   .top-padding {
@@ -658,6 +705,12 @@ body,
   // Add a class to ensure links outside the navbar nav are colored correctly.
   // former long classes for slider tabs //
 
+  .flexslider-wrapper {
+    .ms-WPBody {
+      overflow-x: visible;
+    }
+  }
+
   @media screen and (min-width: @screen-md) {
     .flexslider-wrapper {
       padding-left: 224px;
@@ -816,32 +869,65 @@ body,
   .section-header,
   .ofm-main-header {
   //  margin-top: 0;
+    position: relative;
     margin-bottom: 20px;
+    padding-left: 58px;
     color: #257eca;
     a {
       color: inherit;
     }
     svg,
     img {
+      position: absolute;
+      left: 0;
+      top: -8px;
       height: 48px;
-      margin-top: -8px;
+//      margin-top: -8px;
       width: 50px;
-      vertical-align: top;
-      margin-right: .3em;
+//      vertical-align: top;
+//      margin-right: .3em;
     }
     svg {
       fill: #257eca;
     }
+    @media (max-width: @grid-float-breakpoint ) {
+      font-size: 1.675em;
+      padding-left: 46px;
+      svg,
+      img {
+        top: -4px;
+        height: 37px;
+        width: 40px;
+      }
+    }
     &.teal {
-      color: @teal;
+      color: #005162;
       svg {
-        fill: @teal;
+        fill: #005162;
       }
     }
     &.purple {
-      color: @purple;
+      color: #442e5d;
       svg {
-        fill: @purple;
+        fill: #442e5d;
+      }
+    }
+    &.blue {
+      color: #017cbd;
+      svg {
+        fill: #017cbd;
+      }
+    }
+    &.gray {
+      color: #314953;
+      svg {
+        fill: #314953;
+      }
+    }
+    &.navy {
+      color: #092f54;
+      svg {
+        fill: #092f54;
       }
     }
   }

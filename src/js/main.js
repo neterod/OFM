@@ -232,7 +232,7 @@
       $(sel).parent('li').addClass('selected').closest('.collapse').addClass('in').siblings('.collapsed').removeClass('collapsed').attr('aria-expanded', 'true');
     }
 
-    $(window).load(function () {
+    $(document).ready(function () {
 
         MobileCheck();
         buildNavigation();
