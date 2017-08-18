@@ -799,6 +799,12 @@ body,
     h3 {
       font-size: 20px;
       color: @blue-main;
+      a {
+        &:hover,
+        &:focus {
+          color: lighten(@blue-main, 9%);
+        }
+      }
     }
     .pull-left {
       width: 148px;
@@ -829,6 +835,7 @@ body,
   }
 
   .media-heading {
+    display: block;
     font-size: 1.1em;
     font-weight: 600;
   }
@@ -849,7 +856,12 @@ body,
     color: #2c788f;
     font-weight: 300;
     a {
+      display: block;
       color: inherit;
+      &:hover,
+      &:focus {
+        color: saturate(lighten(#2c788f, 5%), 15%);
+      }
     }
   }
 
@@ -964,7 +976,7 @@ body,
     margin-top: 0;
     font-size: 25px;
     color: #1f4675;
-    text-align: center;
+//    text-align: center;
     @media screen and (max-width: 768px) {
       text-align: center;
       font-size: 18px;
@@ -1105,6 +1117,24 @@ body,
         padding-left: 0;
         list-style: none!important;
         font-size: 17px;
+        >li>a {
+          &:hover,
+          &:focus {
+            background-color: @sidebar-blue;
+            color: white;
+          }
+          &.active,
+          &.selected {
+            >a:visited,
+            >a {
+              background-color: @sidebar-blue;
+              color: white;
+              &:before {
+                background-color: white;
+              }
+            }
+          }
+        }
         li {
           a:visited,
           a {
@@ -1130,22 +1160,14 @@ body,
             }
             &:hover,
             &:focus {
-              background-color: @sidebar-blue;
-              color: white;
-              &:before {
-                background-color: white;
-              }
+              background-color: desaturate(lighten(@sidebar-blue,52%),32%);
             }
           }
           &.active,
           &.selected {
-            a:visited,
-            a {
-              background-color: @sidebar-blue;
-              color: white;
-              &:before {
-                background-color: white;
-              }
+            >a:visited,
+            >a {
+              background-color: desaturate(lighten(@sidebar-blue,52%),32%);
             }
           }
         }

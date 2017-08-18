@@ -229,7 +229,8 @@
       });
 
       // to find active link in the left sidebar navigation
-      $(sel).parent('li').addClass('selected').closest('.collapse').addClass('in').siblings('.collapsed').removeClass('collapsed').attr('aria-expanded', 'true');
+
+      $(sel).parent('li').addClass('selected').closest('.collapse').addClass('in').siblings('.panel-heading').find('a[data-toggle=collapse]').attr('aria-expanded', 'true');
     }
 
     $(document).ready(function () {
@@ -250,6 +251,10 @@
         manualControls: ".slider-tabs>a",
         directionNav: true,
         customDirectionNav: $(".custom-direction-nav a")
+      });
+
+      $(".slider-tabs a").on('dclick', function (event) {
+        window.open($(this).attr('href'));
       });
 
         // Init parallax

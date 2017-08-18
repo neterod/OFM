@@ -465,6 +465,7 @@
   }
 }
 
+@tabs-height: 118px; // height of the flexslider controls (colored boxes)
 @middle-tab-width: 5px;
 .slider-tabs {
   display: table;
@@ -484,7 +485,7 @@
     font-weight: 600;
     line-height: 1.4em;
     width: 20%;
-    height: 125px;
+    height: @tabs-height;
     padding: 0 3px;
     text-align: center;
     color: #fff!important;
@@ -601,7 +602,6 @@
 *    Alignment of the home carousel, controls and carousel's text
 */
 
-@tabs-height: 118px; // height of the flexslider controls (colored boxes)
 @direction-nav-height: 210px;
 @direction-nav-width: 45px;
 
@@ -685,9 +685,9 @@
 
 .custom-direction-nav {
   // activated by js
-  bottom: (@tabs-height + 37px);
+  bottom: (@tabs-height + 30px);
   z-index: 10;
-  pointer-events: none;
+//  pointer-events: none;
   a {
     text-align: center;
     width: @direction-nav-width;
