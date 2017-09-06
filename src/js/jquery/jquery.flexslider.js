@@ -1,5 +1,5 @@
 /*
- * jQuery FlexSlider v2.6.3
+ * jQuery FlexSlider v2.6.4
  * Copyright 2012 WooThemes
  * Contributing Author: Tyler Smith
  */
@@ -18,7 +18,7 @@
     var namespace = slider.vars.namespace,
         msGesture = window.navigator && window.navigator.msPointerEnabled && window.MSGesture,
         touch = (( "ontouchstart" in window ) || msGesture || window.DocumentTouch && document instanceof DocumentTouch) && slider.vars.touch,
-        // depricating this idea, as devices are being released with both of these events
+        // deprecating this idea, as devices are being released with both of these events
         eventType = "click touchend MSPointerUp keyup",
         watchedEvent = "",
         watchedEventClearTimer,
@@ -102,7 +102,7 @@
             var keycode = event.keyCode;
             if (!slider.animating && (keycode === 39 || keycode === 37)) {
               var target = (keycode === 39) ? slider.getTarget('next') :
-                           (keycode === 37) ? slider.getTarget('prev') : false;
+              (keycode === 37) ? slider.getTarget('prev') : false;
               slider.flexAnimate(target, slider.vars.pauseOnAction);
             }
           });
@@ -145,7 +145,7 @@
         if (touch && slider.vars.touch) { methods.touch(); }
 
         // FADE&&SMOOTHHEIGHT || SLIDE:
-        if (!fade || (fade && slider.vars.smoothHeight)) { $(window).bind("resize orientationchange focus", methods.resize); }
+        if (!fade || (fade && slider.vars.smoothHeight)) { $(window).bind("resize orientationchange focus", methods.resize()); }
 
         slider.find("img").attr("draggable", "false");
 
@@ -161,40 +161,40 @@
           slider.currentItem = slider.currentSlide;
           slider.slides.removeClass(namespace + "active-slide").eq(slider.currentItem).addClass(namespace + "active-slide");
           if(!msGesture){
-              slider.slides.on(eventType, function(e){
+            slider.slides.on(eventType, function(e){
+              e.preventDefault();
+              var $slide = $(this),
+                  target = $slide.index();
+              var posFromLeft = $slide.offset().left - $(slider).scrollLeft(); // Find position of slide relative to left of slider container
+              if( posFromLeft <= 0 && $slide.hasClass( namespace + 'active-slide' ) ) {
+                slider.flexAnimate(slider.getTarget("prev"), true);
+              } else if (!$(slider.vars.asNavFor).data('flexslider').animating && !$slide.hasClass(namespace + "active-slide")) {
+                slider.direction = (slider.currentItem < target) ? "next" : "prev";
+                slider.flexAnimate(target, slider.vars.pauseOnAction, false, true, true);
+              }
+            });
+          }else{
+            el._slider = slider;
+            slider.slides.each(function (){
+              var that = this;
+              that._gesture = new MSGesture();
+              that._gesture.target = that;
+              that.addEventListener("MSPointerDown", function (e){
+                e.preventDefault();
+                if(e.currentTarget._gesture) {
+                  e.currentTarget._gesture.addPointer(e.pointerId);
+                }
+              }, false);
+              that.addEventListener("MSGestureTap", function (e){
                 e.preventDefault();
                 var $slide = $(this),
                     target = $slide.index();
-                var posFromLeft = $slide.offset().left - $(slider).scrollLeft(); // Find position of slide relative to left of slider container
-                if( posFromLeft <= 0 && $slide.hasClass( namespace + 'active-slide' ) ) {
-                  slider.flexAnimate(slider.getTarget("prev"), true);
-                } else if (!$(slider.vars.asNavFor).data('flexslider').animating && !$slide.hasClass(namespace + "active-slide")) {
+                if (!$(slider.vars.asNavFor).data('flexslider').animating && !$slide.hasClass('active')) {
                   slider.direction = (slider.currentItem < target) ? "next" : "prev";
                   slider.flexAnimate(target, slider.vars.pauseOnAction, false, true, true);
                 }
               });
-          }else{
-              el._slider = slider;
-              slider.slides.each(function (){
-                  var that = this;
-                  that._gesture = new MSGesture();
-                  that._gesture.target = that;
-                  that.addEventListener("MSPointerDown", function (e){
-                      e.preventDefault();
-                      if(e.currentTarget._gesture) {
-                        e.currentTarget._gesture.addPointer(e.pointerId);
-                      }
-                  }, false);
-                  that.addEventListener("MSGestureTap", function (e){
-                      e.preventDefault();
-                      var $slide = $(this),
-                          target = $slide.index();
-                      if (!$(slider.vars.asNavFor).data('flexslider').animating && !$slide.hasClass('active')) {
-                          slider.direction = (slider.currentItem < target) ? "next" : "prev";
-                          slider.flexAnimate(target, slider.vars.pauseOnAction, false, true, true);
-                      }
-                  });
-              });
+            });
           }
         }
       },
@@ -301,12 +301,13 @@
       },
       directionNav: {
         setup: function() {
-          var directionNavScaffold = $('<ul class="' + namespace + 'direction-nav"><li class="' + namespace + 'nav-prev"><a class="' + namespace + 'prev" href="#">' + slider.vars.prevText + '</a></li><li class="' + namespace + 'nav-next"><a class="' + namespace + 'next" href="#">' + slider.vars.nextText + '</a></li></ul>');
+          //          var directionNavScaffold = $('<ul class="' + namespace + 'direction-nav"><li class="' + namespace + 'nav-prev"><a class="' + namespace + 'prev" href="#">' + slider.vars.prevText + '</a></li><li class="' + namespace + 'nav-next"><a class="' + namespace + 'next" href="#">' + slider.vars.nextText + '</a></li></ul>');
+          var directionNavScaffold = $('<ul class="' + namespace + 'direction-nav"><li><a class="' + namespace + 'prev" href="#">' + '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 39.8 149" xml:space="preserve" width="24px" height="24px" class="prev-next-arrow1"><title>arrow left</title><path class="st0" d="M0,74.5L33.8,0l6,2.7L7.3,74.5l32.5,71.8l-6,2.7L0,74.5"></path></svg>' + '<span class="sr-only">Prev</span></a></li><li><a class="' + namespace + 'next" href="#">' + '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 39.8 149" xml:space="preserve" width="24px" height="24px" class="prev-next-arrow"><title>arrow right</title><path class="st0" d="M39.8,74.5L6,149l-6-2.7l32.5-71.8L0,2.7L6,0L39.8,74.5"></path></svg>' + '<span class="sr-only">Next</span></a></li></ul>');
 
           // CUSTOM DIRECTION NAV:
           if (slider.customDirectionNav) {
             slider.directionNav = slider.customDirectionNav;
-          // CONTROLSCONTAINER:
+            // CONTROLSCONTAINER:
           } else if (slider.controlsContainer) {
             $(slider.controlsContainer).append(directionNavScaffold);
             slider.directionNav = $('.' + namespace + 'direction-nav li a', slider.controlsContainer);
@@ -393,177 +394,177 @@
       },
       touch: function() {
         var startX,
-          startY,
-          offset,
-          cwidth,
-          dx,
-          startT,
-          onTouchStart,
-          onTouchMove,
-          onTouchEnd,
-          scrolling = false,
-          localX = 0,
-          localY = 0,
-          accDx = 0;
+            startY,
+            offset,
+            cwidth,
+            dx,
+            startT,
+            onTouchStart,
+            onTouchMove,
+            onTouchEnd,
+            scrolling = false,
+            localX = 0,
+            localY = 0,
+            accDx = 0;
 
         if(!msGesture){
-            onTouchStart = function(e) {
-              if (slider.animating) {
-                e.preventDefault();
-              } else if ( ( window.navigator.msPointerEnabled ) || e.touches.length === 1 ) {
-                slider.pause();
-                // CAROUSEL:
-                cwidth = (vertical) ? slider.h : slider. w;
-                startT = Number(new Date());
-                // CAROUSEL:
+          onTouchStart = function(e) {
+            if (slider.animating) {
+              e.preventDefault();
+            } else if ( ( window.navigator.msPointerEnabled ) || e.touches.length === 1 ) {
+              slider.pause();
+              // CAROUSEL:
+              cwidth = (vertical) ? slider.h : slider. w;
+              startT = Number(new Date());
+              // CAROUSEL:
 
-                // Local vars for X and Y points.
-                localX = e.touches[0].pageX;
-                localY = e.touches[0].pageY;
-
-                offset = (carousel && reverse && slider.animatingTo === slider.last) ? 0 :
-                         (carousel && reverse) ? slider.limit - (((slider.itemW + slider.vars.itemMargin) * slider.move) * slider.animatingTo) :
-                         (carousel && slider.currentSlide === slider.last) ? slider.limit :
-                         (carousel) ? ((slider.itemW + slider.vars.itemMargin) * slider.move) * slider.currentSlide :
-                         (reverse) ? (slider.last - slider.currentSlide + slider.cloneOffset) * cwidth : (slider.currentSlide + slider.cloneOffset) * cwidth;
-                startX = (vertical) ? localY : localX;
-                startY = (vertical) ? localX : localY;
-
-                el.addEventListener('touchmove', onTouchMove, false);
-                el.addEventListener('touchend', onTouchEnd, false);
-              }
-            };
-
-            onTouchMove = function(e) {
               // Local vars for X and Y points.
-
               localX = e.touches[0].pageX;
               localY = e.touches[0].pageY;
 
-              dx = (vertical) ? startX - localY : startX - localX;
-              scrolling = (vertical) ? (Math.abs(dx) < Math.abs(localX - startY)) : (Math.abs(dx) < Math.abs(localY - startY));
+              offset = (carousel && reverse && slider.animatingTo === slider.last) ? 0 :
+              (carousel && reverse) ? slider.limit - (((slider.itemW + slider.vars.itemMargin) * slider.move) * slider.animatingTo) :
+              (carousel && slider.currentSlide === slider.last) ? slider.limit :
+              (carousel) ? ((slider.itemW + slider.vars.itemMargin) * slider.move) * slider.currentSlide :
+              (reverse) ? (slider.last - slider.currentSlide + slider.cloneOffset) * cwidth : (slider.currentSlide + slider.cloneOffset) * cwidth;
+              startX = (vertical) ? localY : localX;
+              startY = (vertical) ? localX : localY;
 
-              var fxms = 500;
+              el.addEventListener('touchmove', onTouchMove, false);
+              el.addEventListener('touchend', onTouchEnd, false);
+            }
+          };
 
-              if ( ! scrolling || Number( new Date() ) - startT > fxms ) {
-                e.preventDefault();
-                if (!fade && slider.transitions) {
-                  if (!slider.vars.animationLoop) {
-                    dx = dx/((slider.currentSlide === 0 && dx < 0 || slider.currentSlide === slider.last && dx > 0) ? (Math.abs(dx)/cwidth+2) : 1);
-                  }
-                  slider.setProps(offset + dx, "setTouch");
+          onTouchMove = function(e) {
+            // Local vars for X and Y points.
+
+            localX = e.touches[0].pageX;
+            localY = e.touches[0].pageY;
+
+            dx = (vertical) ? startX - localY : startX - localX;
+            scrolling = (vertical) ? (Math.abs(dx) < Math.abs(localX - startY)) : (Math.abs(dx) < Math.abs(localY - startY));
+
+            var fxms = 500;
+
+            if ( ! scrolling || Number( new Date() ) - startT > fxms ) {
+              e.preventDefault();
+              if (!fade && slider.transitions) {
+                if (!slider.vars.animationLoop) {
+                  dx = dx/((slider.currentSlide === 0 && dx < 0 || slider.currentSlide === slider.last && dx > 0) ? (Math.abs(dx)/cwidth+2) : 1);
                 }
+                slider.setProps(offset + dx, "setTouch");
               }
-            };
+            }
+          };
 
-            onTouchEnd = function(e) {
-              // finish the touch by undoing the touch session
-              el.removeEventListener('touchmove', onTouchMove, false);
+          onTouchEnd = function(e) {
+            // finish the touch by undoing the touch session
+            el.removeEventListener('touchmove', onTouchMove, false);
 
-              if (slider.animatingTo === slider.currentSlide && !scrolling && !(dx === null)) {
-                var updateDx = (reverse) ? -dx : dx,
-                    target = (updateDx > 0) ? slider.getTarget('next') : slider.getTarget('prev');
+            if (slider.animatingTo === slider.currentSlide && !scrolling && !(dx === null)) {
+              var updateDx = (reverse) ? -dx : dx,
+                  target = (updateDx > 0) ? slider.getTarget('next') : slider.getTarget('prev');
 
-                if (slider.canAdvance(target) && (Number(new Date()) - startT < 550 && Math.abs(updateDx) > 50 || Math.abs(updateDx) > cwidth/2)) {
-                  slider.flexAnimate(target, slider.vars.pauseOnAction);
-                } else {
-                  if (!fade) { slider.flexAnimate(slider.currentSlide, slider.vars.pauseOnAction, true); }
-                }
+              if (slider.canAdvance(target) && (Number(new Date()) - startT < 550 && Math.abs(updateDx) > 50 || Math.abs(updateDx) > cwidth/2)) {
+                slider.flexAnimate(target, slider.vars.pauseOnAction);
+              } else {
+                if (!fade) { slider.flexAnimate(slider.currentSlide, slider.vars.pauseOnAction, true); }
               }
-              el.removeEventListener('touchend', onTouchEnd, false);
+            }
+            el.removeEventListener('touchend', onTouchEnd, false);
 
-              startX = null;
-              startY = null;
-              dx = null;
-              offset = null;
-            };
+            startX = null;
+            startY = null;
+            dx = null;
+            offset = null;
+          };
 
-            el.addEventListener('touchstart', onTouchStart, false);
+          el.addEventListener('touchstart', onTouchStart, false);
         }else{
-            el.style.msTouchAction = "none";
-            el._gesture = new MSGesture();
-            el._gesture.target = el;
-            el.addEventListener("MSPointerDown", onMSPointerDown, false);
-            el._slider = slider;
-            el.addEventListener("MSGestureChange", onMSGestureChange, false);
-            el.addEventListener("MSGestureEnd", onMSGestureEnd, false);
+          el.style.msTouchAction = "none";
+          el._gesture = new MSGesture();
+          el._gesture.target = el;
+          el.addEventListener("MSPointerDown", onMSPointerDown, false);
+          el._slider = slider;
+          el.addEventListener("MSGestureChange", onMSGestureChange, false);
+          el.addEventListener("MSGestureEnd", onMSGestureEnd, false);
 
-            function onMSPointerDown(e){
-                e.stopPropagation();
-                if (slider.animating) {
-                    e.preventDefault();
-                }else{
-                    slider.pause();
-                    el._gesture.addPointer(e.pointerId);
-                    accDx = 0;
-                    cwidth = (vertical) ? slider.h : slider. w;
-                    startT = Number(new Date());
-                    // CAROUSEL:
+          function onMSPointerDown(e){
+            e.stopPropagation();
+            if (slider.animating) {
+              e.preventDefault();
+            }else{
+              slider.pause();
+              el._gesture.addPointer(e.pointerId);
+              accDx = 0;
+              cwidth = (vertical) ? slider.h : slider. w;
+              startT = Number(new Date());
+              // CAROUSEL:
 
-                    offset = (carousel && reverse && slider.animatingTo === slider.last) ? 0 :
-                        (carousel && reverse) ? slider.limit - (((slider.itemW + slider.vars.itemMargin) * slider.move) * slider.animatingTo) :
-                            (carousel && slider.currentSlide === slider.last) ? slider.limit :
-                                (carousel) ? ((slider.itemW + slider.vars.itemMargin) * slider.move) * slider.currentSlide :
-                                    (reverse) ? (slider.last - slider.currentSlide + slider.cloneOffset) * cwidth : (slider.currentSlide + slider.cloneOffset) * cwidth;
-                }
+              offset = (carousel && reverse && slider.animatingTo === slider.last) ? 0 :
+              (carousel && reverse) ? slider.limit - (((slider.itemW + slider.vars.itemMargin) * slider.move) * slider.animatingTo) :
+              (carousel && slider.currentSlide === slider.last) ? slider.limit :
+              (carousel) ? ((slider.itemW + slider.vars.itemMargin) * slider.move) * slider.currentSlide :
+              (reverse) ? (slider.last - slider.currentSlide + slider.cloneOffset) * cwidth : (slider.currentSlide + slider.cloneOffset) * cwidth;
+            }
+          }
+
+          function onMSGestureChange(e) {
+            e.stopPropagation();
+            var slider = e.target._slider;
+            if(!slider){
+              return;
+            }
+            var transX = -e.translationX,
+                transY = -e.translationY;
+
+            //Accumulate translations.
+            accDx = accDx + ((vertical) ? transY : transX);
+            dx = accDx;
+            scrolling = (vertical) ? (Math.abs(accDx) < Math.abs(-transX)) : (Math.abs(accDx) < Math.abs(-transY));
+
+            if(e.detail === e.MSGESTURE_FLAG_INERTIA){
+              setImmediate(function (){
+                el._gesture.stop();
+              });
+
+              return;
             }
 
-            function onMSGestureChange(e) {
-                e.stopPropagation();
-                var slider = e.target._slider;
-                if(!slider){
-                    return;
+            if (!scrolling || Number(new Date()) - startT > 500) {
+              e.preventDefault();
+              if (!fade && slider.transitions) {
+                if (!slider.vars.animationLoop) {
+                  dx = accDx / ((slider.currentSlide === 0 && accDx < 0 || slider.currentSlide === slider.last && accDx > 0) ? (Math.abs(accDx) / cwidth + 2) : 1);
                 }
-                var transX = -e.translationX,
-                    transY = -e.translationY;
+                slider.setProps(offset + dx, "setTouch");
+              }
+            }
+          }
 
-                //Accumulate translations.
-                accDx = accDx + ((vertical) ? transY : transX);
-                dx = accDx;
-                scrolling = (vertical) ? (Math.abs(accDx) < Math.abs(-transX)) : (Math.abs(accDx) < Math.abs(-transY));
+          function onMSGestureEnd(e) {
+            e.stopPropagation();
+            var slider = e.target._slider;
+            if(!slider){
+              return;
+            }
+            if (slider.animatingTo === slider.currentSlide && !scrolling && !(dx === null)) {
+              var updateDx = (reverse) ? -dx : dx,
+                  target = (updateDx > 0) ? slider.getTarget('next') : slider.getTarget('prev');
 
-                if(e.detail === e.MSGESTURE_FLAG_INERTIA){
-                    setImmediate(function (){
-                        el._gesture.stop();
-                    });
-
-                    return;
-                }
-
-                if (!scrolling || Number(new Date()) - startT > 500) {
-                    e.preventDefault();
-                    if (!fade && slider.transitions) {
-                        if (!slider.vars.animationLoop) {
-                            dx = accDx / ((slider.currentSlide === 0 && accDx < 0 || slider.currentSlide === slider.last && accDx > 0) ? (Math.abs(accDx) / cwidth + 2) : 1);
-                        }
-                        slider.setProps(offset + dx, "setTouch");
-                    }
-                }
+              if (slider.canAdvance(target) && (Number(new Date()) - startT < 550 && Math.abs(updateDx) > 50 || Math.abs(updateDx) > cwidth/2)) {
+                slider.flexAnimate(target, slider.vars.pauseOnAction);
+              } else {
+                if (!fade) { slider.flexAnimate(slider.currentSlide, slider.vars.pauseOnAction, true); }
+              }
             }
 
-            function onMSGestureEnd(e) {
-                e.stopPropagation();
-                var slider = e.target._slider;
-                if(!slider){
-                    return;
-                }
-                if (slider.animatingTo === slider.currentSlide && !scrolling && !(dx === null)) {
-                    var updateDx = (reverse) ? -dx : dx,
-                        target = (updateDx > 0) ? slider.getTarget('next') : slider.getTarget('prev');
-
-                    if (slider.canAdvance(target) && (Number(new Date()) - startT < 550 && Math.abs(updateDx) > 50 || Math.abs(updateDx) > cwidth/2)) {
-                        slider.flexAnimate(target, slider.vars.pauseOnAction);
-                    } else {
-                        if (!fade) { slider.flexAnimate(slider.currentSlide, slider.vars.pauseOnAction, true); }
-                    }
-                }
-
-                startX = null;
-                startY = null;
-                dx = null;
-                offset = null;
-                accDx = 0;
-            }
+            startX = null;
+            startY = null;
+            dx = null;
+            offset = null;
+            accDx = 0;
+          }
         }
       },
       resize: function() {
@@ -656,9 +657,9 @@
           }
           // otherwise loop over all the known prefixes until we find one
           for ( var i = 0; i < prefixes.length; i++ ) {
-              if ((prefixes[i] + 'Hidden') in document) {
-                return prefixes[i] + 'Hidden';
-              }
+            if ((prefixes[i] + 'Hidden') in document) {
+              return prefixes[i] + 'Hidden';
+            }
           }
           // otherwise it's not supported
           return null;
@@ -836,13 +837,13 @@
       // ASNAV:
       var last = (asNav) ? slider.pagingCount - 1 : slider.last;
       return (fromNav) ? true :
-             (asNav && slider.currentItem === slider.count - 1 && target === 0 && slider.direction === "prev") ? true :
-             (asNav && slider.currentItem === 0 && target === slider.pagingCount - 1 && slider.direction !== "next") ? false :
-             (target === slider.currentSlide && !asNav) ? false :
-             (slider.vars.animationLoop) ? true :
-             (slider.atEnd && slider.currentSlide === 0 && target === last && slider.direction !== "next") ? false :
-             (slider.atEnd && slider.currentSlide === last && target === 0 && slider.direction === "next") ? false :
-             true;
+      (asNav && slider.currentItem === slider.count - 1 && target === 0 && slider.direction === "prev") ? true :
+      (asNav && slider.currentItem === 0 && target === slider.pagingCount - 1 && slider.direction !== "next") ? false :
+      (target === slider.currentSlide && !asNav) ? false :
+      (slider.vars.animationLoop) ? true :
+      (slider.atEnd && slider.currentSlide === 0 && target === last && slider.direction !== "next") ? false :
+      (slider.atEnd && slider.currentSlide === last && target === 0 && slider.direction === "next") ? false :
+      true;
     };
     slider.getTarget = function(dir) {
       slider.direction = dir;
@@ -860,9 +861,9 @@
             posCalc = (function() {
               if (carousel) {
                 return (special === "setTouch") ? pos :
-                       (reverse && slider.animatingTo === slider.last) ? 0 :
-                       (reverse) ? slider.limit - (((slider.itemW + slider.vars.itemMargin) * slider.move) * slider.animatingTo) :
-                       (slider.animatingTo === slider.last) ? slider.limit : posCheck;
+                (reverse && slider.animatingTo === slider.last) ? 0 :
+                (reverse) ? slider.limit - (((slider.itemW + slider.vars.itemMargin) * slider.move) * slider.animatingTo) :
+                (slider.animatingTo === slider.last) ? slider.limit : posCheck;
               } else {
                 switch (special) {
                   case "setTotal": return (reverse) ? ((slider.count - 1) - slider.currentSlide + slider.cloneOffset) * pos : (slider.currentSlide + slider.cloneOffset) * pos;
@@ -874,14 +875,14 @@
               }
             }());
 
-            return (posCalc * -1) + "px";
-          }());
+        return (posCalc * -1) + "px";
+      }());
 
       if (slider.transitions) {
         target = (vertical) ? "translate3d(0," + target + ",0)" : "translate3d(" + target + ",0,0)";
         dur = (dur !== undefined) ? (dur/1000) + "s" : "0s";
         slider.container.css("-" + slider.pfx + "-transition-duration", dur);
-         slider.container.css("transition-duration", dur);
+        slider.container.css("transition-duration", dur);
       }
 
       slider.args[slider.prop] = target;
@@ -914,7 +915,7 @@
           // clear out old clones
           if (type !== "init") { slider.container.find('.clone').remove(); }
           slider.container.append(methods.uniqueID(slider.slides.first().clone().addClass('clone')).attr('aria-hidden', 'true'))
-                          .prepend(methods.uniqueID(slider.slides.last().clone().addClass('clone')).attr('aria-hidden', 'true'));
+            .prepend(methods.uniqueID(slider.slides.last().clone().addClass('clone')).attr('aria-hidden', 'true'));
         }
         slider.newSlides = $(slider.vars.selector, slider);
 
@@ -980,15 +981,15 @@
         slider.minW = (minItems) ? minItems * slider.itemT : slider.w;
         slider.maxW = (maxItems) ? (maxItems * slider.itemT) - slideMargin : slider.w;
         slider.itemW = (slider.minW > slider.w) ? (slider.w - (slideMargin * (minItems - 1)))/minItems :
-                       (slider.maxW < slider.w) ? (slider.w - (slideMargin * (maxItems - 1)))/maxItems :
-                       (slider.vars.itemWidth > slider.w) ? slider.w : slider.vars.itemWidth;
+        (slider.maxW < slider.w) ? (slider.w - (slideMargin * (maxItems - 1)))/maxItems :
+        (slider.vars.itemWidth > slider.w) ? slider.w : slider.vars.itemWidth;
 
         slider.visible = Math.floor(slider.w/(slider.itemW));
         slider.move = (slider.vars.move > 0 && slider.vars.move < slider.visible ) ? slider.vars.move : slider.visible;
         slider.pagingCount = Math.ceil(((slider.count - slider.visible)/slider.move) + 1);
         slider.last =  slider.pagingCount - 1;
         slider.limit = (slider.pagingCount === 1) ? 0 :
-                       (slider.vars.itemWidth > slider.w) ? (slider.itemW * (slider.count - 1)) + (slideMargin * (slider.count - 1)) : ((slider.itemW + slideMargin) * slider.count) - slider.w - slideMargin;
+        (slider.vars.itemWidth > slider.w) ? (slider.itemW * (slider.count - 1)) + (slideMargin * (slider.count - 1)) : ((slider.itemW + slideMargin) * slider.count) - slider.w - slideMargin;
       } else {
         slider.itemW = slider.w;
         slider.itemM = slideMargin;
@@ -1167,7 +1168,7 @@
             selector = (options.selector) ? options.selector : ".slides > li",
             $slides = $this.find(selector);
 
-      if ( ( $slides.length === 1 && options.allowOneSlide === false ) || $slides.length === 0 ) {
+        if ( ( $slides.length === 1 && options.allowOneSlide === false ) || $slides.length === 0 ) {
           $slides.fadeIn(400);
           if (options.start) { options.start($this); }
         } else if ($this.data('flexslider') === undefined) {

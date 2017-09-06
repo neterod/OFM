@@ -242,18 +242,36 @@
         activeSubmenuLink();
         $('.mobile-table').mobileTables();
 
-        $('img[src$=".svg"]').convertSVGsToInline();
+      var dfd = $.Deferred();
 
-      $('.flexslider').flexslider({
-        animation: "fade",
-        animationLoop: true,
-        controlNav: true,
-        manualControls: ".slider-tabs>a",
-        directionNav: true,
-        customDirectionNav: $(".custom-direction-nav a")
+      dfd
+        .done(buildNavigation())
+        .done($('img[src$=".svg"]').convertSVGsToInline());
+
+      $('#boxslider').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        itemWidth: 120,
+        itemMargin: 0,
+        minItems: 2,
+        maxItems: 5,
+        asNavFor: '#mainslider'
       });
 
-      $(".slider-tabs a").on('dclick', function (event) {
+      $('#mainslider').flexslider({
+        animation: "fade",
+        controlNav: false,
+        directionNav: true,
+        animationLoop: true,
+        slideshow: true,
+//        manualControls: ".slider-tabs a",
+        customDirectionNav: $(".custom-direction-nav a"),
+        sync: "#boxslider"
+      });
+
+      $("#boxslider .slides li a").on('click', function (event) {
         window.open($(this).attr('href'));
       });
 
