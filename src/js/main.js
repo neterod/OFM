@@ -216,6 +216,8 @@
           sel = '.sidebar-content li a[href*="' + url.split('/').pop().split('#')[0] + '"]',
           cur;
 
+      console.log(sel);
+
       // to find active link in the top navigation
       $('.nav-left-internal > li > a').each( function () {
 
