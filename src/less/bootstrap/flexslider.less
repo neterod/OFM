@@ -13,8 +13,8 @@
 */
 
 @font-path: "fonts";
-@font-name: "flexslider-icon";
-@font-file-name: "flexslider-icon";
+//@font-name: "flexslider-icon";
+//@font-file-name: "flexslider-icon";
 @default-duration: 1s;
 @default-easing: ease;
 @default-border-radius: 5px;
@@ -78,16 +78,16 @@
 * FONT-FACE
 * ====================================================================================================================*/
 
-@font-face {
-  font-family: '@{font-name}';
-  src:url('@{font-path}/@{font-file-name}.eot');
-  src:url('@{font-path}/@{font-file-name}.eot?#iefix') format('embedded-opentype'),
-  url('@{font-path}/@{font-file-name}.woff') format('woff'),
-  url('@{font-path}/@{font-file-name}.ttf') format('truetype'),
-  url('@{font-path}/@{font-file-name}.svg#flexslider-icon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+//@font-face {
+//  font-family: '@{font-name}';
+//  src:url('@{font-path}/@{font-file-name}.eot');
+//  src:url('@{font-path}/@{font-file-name}.eot?#iefix') format('embedded-opentype'),
+//  url('@{font-path}/@{font-file-name}.woff') format('woff'),
+//  url('@{font-path}/@{font-file-name}.ttf') format('truetype'),
+//  url('@{font-path}/@{font-file-name}.svg#flexslider-icon') format('svg');
+//  font-weight: normal;
+//  font-style: normal;
+//}
 
 
 /* ====================================================================================================================
@@ -226,7 +226,7 @@
     .transition( 0.3s,
     ease-in-out);
     &:before {
-      font-family: "@{font-name}";
+//      font-family: "@{font-name}";
       font-size: 40px;
       display: inline-block;
       content: @flex-direction-nav-icon-prev;
@@ -296,7 +296,7 @@
   cursor: pointer;
   color: #000;
   &:before {
-    font-family: "@{font-name}";
+//    font-family: "@{font-name}";
     font-size: 20px;
     display: inline-block;
     content: @flex-pauseplay-icon-pause;
@@ -595,14 +595,17 @@
 
 @boxslider-height: 125px; // height of the colored boxes
 #boxslider {
-  height: @boxslider-height;
+  height: @boxslider-height + 20;
+  margin-top: -20px;
   overflow: hidden;
-  background-color: #103453;
+  background-color: transparent;
   .slides {
+    margin-top: 20px;
   //  list-style: none;
   //  display: table;
   //  width: auto;
     height: @boxslider-height;
+    background-color: #103453;
   //  @media (max-width: 1060px) and (min-width: 992px) {
   //    width: 100%;
   //  }
@@ -713,7 +716,7 @@
     color: transparent;
     background-color: rgba(0,0,0,.45);
     width: auto;
-    top: 0;
+    top: 20px;
     margin: 0;
     opacity: 1;
     svg {
@@ -766,6 +769,7 @@
   }
   #mainslider {
     padding-bottom: 120px;
+    color: #fff;
   }
 }
 
