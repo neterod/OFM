@@ -30,10 +30,10 @@
 
         /* jQuery library */
         jQuerySrc = [
-            '../src/js/jquery/jquery-1.11.2.min.js',
-            '../src/js/jquery/jquery.flexslider.js',
-            //'../src/js/jquery/jquery.matchHeight-min.js',
-            '../src/js/jquery/jquery.printElement.js'
+            '../src/js/jquery/jquery-1.11.2.min.js'
+            ,'../src/js/jquery/jquery.flexslider.js'
+            //,'../src/js/jquery/jquery.matchHeight-min.js'
+//            ,'../src/js/jquery/jquery.printElement.js'
         ],
         jQueryDest = distJS,
         jQueryLibFile = 'jquery.min.js',
@@ -44,7 +44,7 @@
             '../src/js/bootstrap/affix.js',
             '../src/js/bootstrap/alert.js',
             '../src/js/bootstrap/button.js',
-            '../src/js/bootstrap/carousel.js',
+//            '../src/js/bootstrap/carousel.js',
             '../src/js/bootstrap/collapse.js',
             '../src/js/bootstrap/dropdown.js',
             '../src/js/bootstrap/modal.js',
@@ -76,7 +76,7 @@
 
         /* javascript files */
         jsSrc  = [
-            '../src/js/plugins/accessibility-nav.js',
+//            '../src/js/plugins/accessibility-nav.js',
             '../src/js/plugins/mobile-nav-height.js',
             '../src/js/plugins/convert-svg-inline.js',
             '../src/js/plugins/mobile-tables.js',

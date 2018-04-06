@@ -185,6 +185,60 @@ body,
         }
       }
     }
+    &.full-container {
+      margin: 0;
+      padding-left: 15px;
+      padding-right: 15px;
+      .main-content-right {
+//        padding-right: 305px;
+      }
+      .col-button {
+        padding: 0;
+        float: none;
+        width: 100%;
+      }
+      .col-quicklin {
+        background-color: #f0f0f0;
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 100%;;
+        float: none;
+        .style2 {
+          font-size: 1.4em;
+          color: @brand-primary;
+          margin-bottom: 10px;
+          strong {
+            font-weight: 300;
+          }
+        }
+      }
+      .table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+      }
+      @media (min-width: @grid-float-breakpoint ) {
+        .col-button {
+          float: left;
+          width: ~'calc(100% - 305px)';
+        }
+        .col-quicklin {
+          float: right;
+          width: 290px;
+        }
+      }
+      hr {
+        display: none;
+      }
+      .ms-vh,
+      .ms-vh2,
+      .ms-vh2-nograd,
+      .ms-vh3-nograd,
+      .ms-vh2-nograd-icon,
+      .ms-vh2-nofilter-icon,
+      .ms-ph {
+        white-space: normal!important;
+      }
+    }
   }
 
   .main-content {
@@ -1161,6 +1215,18 @@ body,
   }
 
   .panel-group#accordionMenu {
+    #heading1>a:first-child {
+      font-size: 21px;
+      background-color: darken(@sidebar-blue,7%);
+      color: #fff;
+      background-repeat: no-repeat;
+      background-size: 24px 24px;
+      background-position: 9px center;
+    }
+    #heading1:not(.active)>a:first-child {
+      padding-left: 41px;
+      background-image: url(/SiteAssets/images/arrow-back.png);
+    }
     .panel+.panel {
       margin-top: 0;
       border-top: 0;
@@ -1168,6 +1234,8 @@ body,
     .panel {
       border-radius: 0;
       border: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
       ul {
         margin: 0;
         padding-left: 0;
@@ -1202,7 +1270,11 @@ body,
             padding: 6px 15px 6px 33px;
             color: inherit;
             text-decoration: none;
-            line-height: 1.25em;
+            line-height: 1.2;
+            @media (max-width: @grid-float-breakpoint ) {
+              font-size: 15px;
+              padding: 4px 15px 4px 30px;
+            }
 //            &:before {
 //              content: '';
 //              position: absolute;
@@ -1217,7 +1289,7 @@ body,
             &:hover,
             &:focus {
               color: inherit;
-              background-color: desaturate(lighten(@sidebar-blue,52%),32%);
+              background-color: desaturate(lighten(@sidebar-blue,52%),32%)!important;
             }
           }
           &.active,
@@ -1225,7 +1297,7 @@ body,
             >a:visited,
             >a {
               color: inherit;
-              background-color: desaturate(lighten(@sidebar-blue,52%),32%);
+              background-color: desaturate(lighten(@sidebar-blue,52%),32%)!important;
             }
           }
         }
@@ -1253,13 +1325,18 @@ body,
       border-top: 0;
     }
     .panel-default .panel-heading .panel-heading-link {
-      font-size: 21px;
+      font-size: 19px;
+      line-height: 1.25;
       font-weight: 400;
       display: block;
-      padding: 12px 40px 12px 15px;
+      padding: 10px 40px 10px 15px;
       text-decoration: none;
       background-color: #f0f0f0;
       color: @sidebar-blue;
+      @media (max-width: @grid-float-breakpoint ) {
+        font-size: 16px;
+        padding: 7px 40px 7px 15px;
+      }
     }
 
     .panel-default .panel-heading .accordion-toggle {
@@ -1272,6 +1349,12 @@ body,
       background-size: 1.5em 1.5em;
       background-position: center center;
       background-repeat: no-repeat;
+      @media (max-width: @grid-float-breakpoint ) {
+        width: 2em;
+        height: 100%;
+        min-height: 1.8em;
+        background-size: 1.2em 1.2em;
+      }
     }
 
     .panel-default .panel-heading .accordion-toggle[aria-expanded="false"] {

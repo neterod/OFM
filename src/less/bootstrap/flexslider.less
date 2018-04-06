@@ -176,10 +176,10 @@
   zoom: 1;
   .border-radius( @flexslider-border-radius );
   .box-shadow( @flexslider-box-shadow-x-axis,
-  @flexslider-box-shadow-y-axis,
-  @flexslider-box-shadow-blur,
-  @flexslider-box-shadow-color,
-  @flexslider-box-shadow-inset);
+    @flexslider-box-shadow-y-axis,
+    @flexslider-box-shadow-blur,
+    @flexslider-box-shadow-color,
+    @flexslider-box-shadow-inset);
   .slides {
     zoom: 1;
     img {
@@ -224,9 +224,9 @@
     color: @flex-direction-nav-color;
     text-shadow: @flex-direction-nav-text-shadow;
     .transition( 0.3s,
-    ease-in-out);
+      ease-in-out);
     &:before {
-//      font-family: "@{font-name}";
+      //      font-family: "@{font-name}";
       font-size: 40px;
       display: inline-block;
       content: @flex-direction-nav-icon-prev;
@@ -296,7 +296,7 @@
   cursor: pointer;
   color: #000;
   &:before {
-//    font-family: "@{font-name}";
+    //    font-family: "@{font-name}";
     font-size: 20px;
     display: inline-block;
     content: @flex-pauseplay-icon-pause;
@@ -454,7 +454,7 @@
 @middle-tab-width: 5px;
 .slider-tabs {
   list-style: none
-  display: table;
+    display: table;
   width: 100%;
   height: @tabs-height;
   @media (max-width: 1060px) and (min-width: 992px) {
@@ -601,17 +601,17 @@
   background-color: transparent;
   .slides {
     margin-top: 20px;
-  //  list-style: none;
-  //  display: table;
-  //  width: auto;
+    //  list-style: none;
+    //  display: table;
+    //  width: auto;
     height: @boxslider-height;
     background-color: #103453;
-  //  @media (max-width: 1060px) and (min-width: 992px) {
-  //    width: 100%;
-  //  }
-  //  @media (max-width: @screen-sm) {
-  //    display: none;
-  //  }
+    //  @media (max-width: 1060px) and (min-width: 992px) {
+    //    width: 100%;
+    //  }
+    //  @media (max-width: @screen-sm) {
+    //    display: none;
+    //  }
     li {
       display: block;
       float: left;
@@ -620,7 +620,7 @@
       a:link {
         display: table-cell;
         width: 976px;
-//        display: block;
+        //        display: block;
         vertical-align: middle;
         font-size: 18px;
         font-weight: 600;
@@ -630,27 +630,27 @@
         text-align: center;
         background-color: #555;
         color: #fff!important;
-//        @media (min-width: @screen-md) {
-//          font-size: 17px;
-//          font-weight: 600;
-//          line-height: 1.4em;
-//          padding: 0 10px;
-//        }
-//        @media (max-width: @screen-sm) {
-//          display: none;
-//          top: 250px;
-//          width: 100%;
-//          position: absolute;
-//          height: 20%;
-//          font-size: 24px;
-//          z-index: 103;
-//          font-size: 19px;
-//          padding: 0;
-//        }
+        //        @media (min-width: @screen-md) {
+        //          font-size: 17px;
+        //          font-weight: 600;
+        //          line-height: 1.4em;
+        //          padding: 0 10px;
+        //        }
+        //        @media (max-width: @screen-sm) {
+        //          display: none;
+        //          top: 250px;
+        //          width: 100%;
+        //          position: absolute;
+        //          height: 20%;
+        //          font-size: 24px;
+        //          z-index: 103;
+        //          font-size: 19px;
+        //          padding: 0;
+        //        }
         &:hover,
         &:focus {
           text-decoration: none;
-//          background-color: lighten(@dark-blue, 5%);
+          //          background-color: lighten(@dark-blue, 5%);
         }
       }
       &:first-child,
@@ -737,13 +737,13 @@
     }
   }
   .flex-direction-nav .flex-prev:not(.flex-disabled) {
-//    left: 0;
+    //    left: 0;
     svg {
       //        float: left;
     }
   }
   .flex-direction-nav .flex-next:not(.flex-disabled) {
-//    right: 0;
+    //    right: 0;
     svg {
       //        float: right;
     }
@@ -857,6 +857,7 @@
     svg,
     img {
       height: 88px;
+      width: 39px;
     }
     svg {
       transition: .3s;
