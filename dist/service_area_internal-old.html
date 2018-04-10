@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NETE Starter Template</title>
+
+  <link rel="stylesheet" href="css/core4.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- NOTE: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <link rel="stylesheet" href="css/ie8.css">
+    <script src="js/ie/ie.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="ms-WPBody">
+
+  <a href="#content" id="skip-nav">Skip Navigation Links</a>
+
+  <div class="container-fluid branding">
+    <div class="row">
+      <div class="col-sm-6 logo">
+        <a href="/" class="nih-top-logo">
+          <img class="nih-badge" src="/SiteAssets/images/nih-logo.svg" alt="NIH Logo">
+          <span class="nih-text">National Institutes of Health</span>
+          <span class="nih-text-sm">Office of Management</span>
+        </a>
+      </div>
+
+      <div class="col-sm-6 search text-right">
+        <h1 class="text-right top-header">
+          <a href="/">
+            <span class="finmanagement">Office of Financial Management</span>
+            <span class="intranet">INTRANET</span>
+          </a>
+        </h1>
+        <form id="custom-search-form" class="form-search form-horizontal">
+          <label for="search-text" class="sr-only">Search Term(s)</label>
+          <input type="text" class="form-control-search search-query mac-style" id="search-text" placeholder="Search">
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar navbar-default-middle navbar-internal" role="navigation">
+    <div class="container-fluid nhb-high">
+      <div class="navbar-header navbar-header-bg">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav nav-left-internal">
+          <li>
+            <a class="nih-internal gradient-overlay" href=""><img src="/SiteAssets/images/nih.svg" alt=""><span>NIH Staff Resources</span></a>
+          </li>
+          <li>
+            <a class="resources-internal gradient-overlay" href="#"><img src="/SiteAssets/images/resources.svg" alt=""><span>General Resources</span></a>
+          </li>
+          <li>
+            <a class="ofm-staff-internal gradient-overlay" href="#"><img src="/SiteAssets/images/staff.svg" alt=""><span>OFM Staff</span></a>
+          </li>
+          <li>
+            <a class="ofm-managers-internal gradient-overlay" href="#"><img src="/SiteAssets/images/managers.svg" alt=""><span>OFM Managers</span></a>
+          </li>
+          <li>
+            <a class="offices-internal gradient-overlay" href="nih_staff_resources.html"><img src="/SiteAssets/images/org.svg" alt=""><span>Offices and Divisions</span></a>
+            <ul>
+              <li><a href="">Program Management</a></li>
+              <li><a href="">Financial Reporting</a></li>
+              <li><a href="">Policy and Quality</a></li>
+              <li><a href="">Financial Operations</a></li>
+              <li><a href="">Central Services and Business Operations</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="content" class="internal-bg service-wrapper nav-bumper">
+    <div class="container-fluid">
+      <div class="row content-wrapper">
+        <div class="sidebar-content sidebar-content-left">
+<!--
+          <div id="dvAccordion">
+            <div class="panel-group" id="accordionMenu" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading active" id="heading1" role="tab">
+                  <a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/Pages/home.aspx">Program Management Division</a>
+                  <a class="accordion-toggle" aria-expanded="true" aria-controls="collapse1" href="#collapse1" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a>
+                </div>
+                <div class="panel-collapse collapse in" id="collapse1" role="tabpanel" aria-labelledby="heading1">
+                  <div class="panel-body">
+                    <ul>
+                      <li><a href="http://ofmsps.od.nih.gov/pmo/Pages/Workstreams.aspx" class="collapse1">Workstreams</a></li>
+                      <li><a href="http://ofmsps.od.nih.gov/pmo/Pages/OFM-Front-Office.aspx" class="collapse2">OFM Front Office (Restricted)</a></li>
+                      <li><a href="http://ofmsps.od.nih.gov/pmo/Pages/OFM-Contracts.aspx" class="collapse3">OFM Contracts (Restricted)</a></li>
+                      <li><a href="http://ofmsps.od.nih.gov/pmo/Pages/Administrative-Branch-Files.aspx" class="collapse4">Administrative Branch Files (Restricted)</a></li>
+                      <li><a href="http://ofmsps.od.nih.gov/pmo/Pages/Efficient-Spending.aspx" class="collapse6">Efficient Spending</a></li>
+                      <li><a href="http://ofmsps.od.nih.gov/pmo/Pages/CAN-Change-Workgroup.aspx" class="collapse7">CAN Change Workgroup FY 2017</a></li>
+                      <li><a href="http://ofmsps.od.nih.gov/pmo/Pages/OFM-IT-SUPPORT.aspx" class="collapse8">OFM-IT-SUPPORT (Restricted)</a></li>
+                      <li><a href="http://ofmsps.od.nih.gov/pmo/Pages/Staff-Resources.aspx" class="collapse9">Staff Resources</a></li>
+                      <li><a href="http://ofmsps.od.nih.gov/pmo/Pages/eVIP-Rollback.aspx" class="collapse10">eVIP Rollback</a></li>
+                      <li><a href="http://ofmsps.od.nih.gov/pmo/Pages/Intranet-Redesign.aspx" class="collapse11">Intranet Redesign</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" id="heading2" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/OFM%20System%20Support/Pages/home.aspx">OFM SREA/ROMANSYS/SPRS Documentation (Restricted)</a></div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading3" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/Pages/Program-and-Change-Management-Branch.aspx">Program and Change Management Branch</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse3" href="#collapse3" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse3" role="tabpanel" aria-labelledby="heading3">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/Pages/Program-and-Change-Management-Branch.aspx" class="collapse12">Program and Change Management Branch</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading4" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/Pages/Travel-Policy-Branch.aspx">Travel Policy Branch</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse4" href="#collapse4" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse4" role="tabpanel" aria-labelledby="heading4">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/Pages/Travel-Policy-Branch.aspx" class="collapse13">Travel Policy Branch</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading5" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/Pages/Archives.aspx">Archives</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse5" href="#collapse5" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse5" role="tabpanel" aria-labelledby="heading5">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/Pages/Program-Management-Archives.aspx" class="collapse14">Program Management Archives</a></li>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/Pages/Program-Management-Action-Item-Archives.aspx" class="collapse15">Program Management Action Item Archives</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading6" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/Pages/Quick-Links.aspx">Quick Links</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse6" href="#collapse6" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse6" role="tabpanel" aria-labelledby="heading6">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/Pages/OFM-Student-Loan-Repayment-Program.aspx" class="collapse16">OFM Student Loan Repayment Program</a></li>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/Pages/Financial-Management-Links.aspx" class="collapse17">Financial Management Links</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading7" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/ofmcfrsgtas.od.nih/Pages/home.aspx">CFRS/GTAS</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse7" href="#collapse7" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse7" role="tabpanel" aria-labelledby="heading7">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/ofmcfrsgtas.od.nih/Pages/CFRS-GTAS-Ppts.aspx" class="collapse18">CFRS/GTAS PPTs</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading8" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/Efficient%20Spending/Pages/home.aspx">Efficient Spending</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse8" href="#collapse8" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse8" role="tabpanel" aria-labelledby="heading8">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/Efficient%20Spending/Pages/Shared-Documents.aspx" class="collapse19">Shared Documents</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading9" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/evip/Pages/home.aspx">Electronic Vendor Invoicing Program (eVIP)</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse9" href="#collapse9" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse9" role="tabpanel" aria-labelledby="heading9">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/evip/Pages/eVIP-Help-Desk-Log.aspx" class="collapse20">eVIP Help Desk Log</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading10" role="tab"><a class="panel-heading-link" href="#">eVIP Vendor Support</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse10" href="#collapse10" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse10" role="tabpanel" aria-labelledby="heading10">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/Pages/eVIP-Vendor-Support.aspx" class="collapse21">eVIP Vendor Support</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading11" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/fsi/Pages/home.aspx">Financial Systems Integration (FSI) SharePoint Site</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse11" href="#collapse11" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse11" role="tabpanel" aria-labelledby="heading11">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/fsi/Pages/home.aspx" class="collapse22">Financial Systems Integration (FSI) SharePoint Site</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading12" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/ofmpmo.user%20access%20forms.od.nih/Pages/home.aspx">NBS User Access Forms</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse12" href="#collapse12" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse12" role="tabpanel" aria-labelledby="heading12">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/ofmpmo.user%20access%20forms.od.nih/Pages/home.aspx" class="collapse23">NBS User Access Forms</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading13" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/NBS_R12TU_Orientation_508%20June%202014/Pages/home.aspx">NBS-R12TU-Orientation-508 June 2014</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse13" href="#collapse13" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse13" role="tabpanel" aria-labelledby="heading13">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/NBS_R12TU_Orientation_508%20June%202014/Pages/home.aspx" class="collapse24">NBS-R12TU-Orientation-508 June 2014</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading14" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/Ebola/Pages/home.aspx">NIH Ebola Travel Data</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse14" href="#collapse14" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse14" role="tabpanel" aria-labelledby="heading14">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/Ebola/Pages/home.aspx" class="collapse25">NIH Ebola Travel Data</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading15" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/conference/Pages/home.aspx">Non-NIH Conference Projections</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse15" href="#collapse15" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse15" role="tabpanel" aria-labelledby="heading15">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/conference/Pages/home.aspx" class="collapse26">Non-NIH Conference Projections</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading16" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/OFMCOOP/Pages/home.aspx">OFM COOP-CRT</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse16" href="#collapse16" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse16" role="tabpanel" aria-labelledby="heading16">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/OFMCOOP/Pages/home.aspx" class="collapse27">OFM COOP-CRT</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading17" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/Policy/Pages/home.aspx">OFM Policy</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse17" href="#collapse17" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse17" role="tabpanel" aria-labelledby="heading17">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/Policy/Pages/home.aspx" class="collapse28">OFM Policy</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading18" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/R12/Pages/home.aspx">OFM R12</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse18" href="#collapse18" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse18" role="tabpanel" aria-labelledby="heading18">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/R12/Pages/home.aspx" class="collapse29">OFM R12</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading19" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/OFM%20System%20Support/Pages/home.aspx">OFM SREA/ROMANSYS/RVPS Documentation</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse19" href="#collapse19" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse19" role="tabpanel" aria-labelledby="heading19">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/OFM%20System%20Support/SitePages/Home.aspx" class="collapse30">OFM SREA/ROMANSYS/RVPS Documentation</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading20" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/Survey/Pages/home.aspx">OFM Survey</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse20" href="#collapse20" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse20" role="tabpanel" aria-labelledby="heading20">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/Survey/Pages/home.aspx" class="collapse31">OFM Survey</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading21" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/Survey/Pages/home.aspx">OFM Ticketing System</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse21" href="#collapse21" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse21" role="tabpanel" aria-labelledby="heading21">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/test/Pages/home.aspx" class="collapse32">OFM Ticketing System</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading22" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/test/Pages/home.aspx">OFM Ticketing System</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse22" href="#collapse22" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse22" role="tabpanel" aria-labelledby="heading22">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/test/Pages/home.aspx" class="collapse32">OFM Ticketing System</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading23" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/ofminvoicestatus/Pages/home.aspx">OFM Two-Way Oracle Workflow Invoice Status</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse23" href="#collapse23" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse23" role="tabpanel" aria-labelledby="heading23">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/ofminvoicestatus/Pages/home.aspx" class="collapse33">OFM Two-Way Oracle Workflow Invoice Status</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading24" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/OFM_initiatives/Pages/home.aspx">OFM_Initiatives</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse24" href="#collapse24" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse24" role="tabpanel" aria-labelledby="heading24">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/OFM_initiatives/Pages/home.asp" class="collapse34">OFM_Initiatives</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading25" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/OFMGrantsKPI/Pages/home.aspx">OFM Grants KPI</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse25" href="#collapse25" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse25" role="tabpanel" aria-labelledby="heading25">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/OFMGrantsKPI/Pages/home.aspx" class="collapse35">OFM Grants KPI</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading26" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/OFMVENDORKPI/Pages/home.aspx">OFM Vendor KPI</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse26" href="#collapse26" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse26" role="tabpanel" aria-labelledby="heading26">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/OFMVENDORKPI/Pages/home.aspx" class="collapse36">OFM Vendor KPI</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="heading27" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/invoicestatus/Pages/home.aspx">Two-Way Oracle Workflow Invoice Status</a><a class="accordion-toggle collapsed" aria-expanded="false" aria-controls="collapse27" href="#collapse27" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                  <div class="panel-collapse collapse" id="collapse27" role="tabpanel" aria-labelledby="heading27">
+                    <div class="panel-body">
+                      <ul>
+                        <li><a href="http://ofmsps.od.nih.gov/pmo/invoicestatus/Pages/home.aspx" class="collapse37">Two-Way Oracle Workflow Invoice Status</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+-->
+
+          <div id="dvAccordion">
+            <div class="panel-group" id="accordionMenu" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" id="heading1" role="tab">
+                  <a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/Pages/home.aspx">Program Management Division</a>
+                  <div class="panel panel-default">
+                    <div class="panel-heading active" id="heading2" role="tab"><a class="panel-heading-link" href="http://ofmsps.od.nih.gov/pmo/ofmcfrsgtas.od.nih/Pages/home.aspx">CFRS/GTAS</a><a class="accordion-toggle" aria-expanded="true" aria-controls="collapse2" href="#collapse2" data-toggle="collapse" data-parent="#accordionMenu"><span class="sr-only">menu section toggle</span> </a></div>
+                    <div class="panel-collapse collapse in" id="collapse2" role="tabpanel" aria-labelledby="heading2">
+                      <div class="panel-body">
+                        <ul>
+                          <li><a href="http://ofmsps.od.nih.gov/pmo/ofmcfrsgtas.od.nih/Pages/CFRS-GTAS-Ppts.aspx" class="collapse1">CFRS/GTAS PPTs</a></li>
+                          <li><a href="#" class="collapse2">SOPs</a></li>
+                          <li><a href="#" class="collapse3">Validation Reports</a></li>
+                          <li><a href="#" class="collapse4">Attribution Tables</a></li>
+                          <li><a href="#" class="collapse5">Calendar</a></li>
+                          <li><a href="#" class="collapse6">CFRS/GTAS Updates</a></li>
+                          <li><a href="#" class="collapse7">CFRS/GTAS Communications</a></li>
+                          <li><a href="#" class="collapse8">Job Aids</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="main-content main-content-right">
+          <h2 class="section-header">OFM MAX Implementation</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+
+          <ul>
+            <li>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed</li>
+            <li>quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</li>
+            <li>unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</li>
+          </ul>
+
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+          <div class="col-sm-6">
+            <a href="" class="btn btn-block"><span class="vertical-middle">Lorem ipsum dolor sit amet dgdfgd dfgdsgf dfgdfs sdfsdsfs sdsa adas sefsfdsf sds</span></a>
+          </div>
+          <div class="col-sm-6">
+            <a href="" class="btn btn-block"><span class="vertical-middle">Lorem ipsum dolor sit amet</span></a>
+          </div>
+          <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer internal_footer" role="navigation">
+    <div class="container-fluid footer-fix">
+      <div class="row">
+        <div class="col-md-12">
+          <ul>
+            <li><a href="http://www.nih.gov/">Home</a></li>
+            <li><a href="http://www.hhs.gov/">NIH Staff Resources</a></li>
+            <li><a href="http://www.usa.gov/">General Resources</a></li>
+            <li><a href="http://www.nih.gov/">OFM Staff</a></li>
+            <li><a href="http://www.hhs.gov/">OFM Managers</a></li>
+            <li><a href="http://www.usa.gov/">Offices and Divisions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <ul>
+            <li><a href="http://www.nih.gov/">U.S. Department of Health &amp; Human Services</a></li>
+            <li><a href="http://www.hhs.gov/">National Institutes of Health</a></li>
+            <li><a href="http://www.usa.gov/">USA.gov</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="tagline">NIH... Turning Discovery into Health<sup>®</sup></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a class="btn-2top hidden-print"><img src="/SiteAssets/images/arrow-up.png" alt="arrow up"><span class="tip">Back to Top</span></a>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

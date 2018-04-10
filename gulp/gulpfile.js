@@ -30,10 +30,10 @@
 
         /* jQuery library */
         jQuerySrc = [
-            '../src/js/jquery/jquery-1.11.2.min.js',
-            '../src/js/jquery/jquery.flexslider.js',
-            //'../src/js/jquery/jquery.matchHeight-min.js',
-            '../src/js/jquery/jquery.printElement.js'
+            '../src/js/jquery/jquery-1.11.2.min.js'
+            ,'../src/js/jquery/jquery.flexslider.js'
+            //,'../src/js/jquery/jquery.matchHeight-min.js'
+//            ,'../src/js/jquery/jquery.printElement.js'
         ],
         jQueryDest = distJS,
         jQueryLibFile = 'jquery.min.js',
@@ -44,14 +44,14 @@
             '../src/js/bootstrap/affix.js',
             '../src/js/bootstrap/alert.js',
             '../src/js/bootstrap/button.js',
-            '../src/js/bootstrap/carousel.js',
+//            '../src/js/bootstrap/carousel.js',
             '../src/js/bootstrap/collapse.js',
             '../src/js/bootstrap/dropdown.js',
             '../src/js/bootstrap/modal.js',
             '../src/js/bootstrap/scrollspy.js',
             '../src/js/bootstrap/tab.js',
-            '../src/js/bootstrap/tooltip.js',
-            '../src/js/bootstrap/popover.js',
+//            '../src/js/bootstrap/tooltip.js',
+//            '../src/js/bootstrap/popover.js',
             '../src/js/bootstrap/transition.js'
         ],
         libBSDest = distJS,
@@ -76,7 +76,7 @@
 
         /* javascript files */
         jsSrc  = [
-            '../src/js/plugins/accessibility-nav.js',
+//            '../src/js/plugins/accessibility-nav.js',
             '../src/js/plugins/mobile-nav-height.js',
             '../src/js/plugins/convert-svg-inline.js',
             '../src/js/plugins/mobile-tables.js',
@@ -190,7 +190,7 @@
     gulp.task('compilecssbootstrap', function () {
         return gulp.src(cssBootstrapSrc)
             .pipe(less({
-                compress: true
+              compress: true
             }))
             .pipe(rename('bootstrap.min.css'))
             .pipe(gulp.dest(cssDest));
@@ -199,9 +199,9 @@
     gulp.task('minifyhtml', function () {
         return gulp.src('../src/*.html')
             .pipe(nunjucks.compile())
-            .pipe(htmlmin({
-                collapseWhitespace: true
-            }))
+//            .pipe(htmlmin({
+//                collapseWhitespace: true
+//            }))
             .pipe(gulp.dest(distDir));
     });
 
@@ -221,7 +221,7 @@
         });
 
         gulp.watch('../src/less/*.less', ['compilecss']);
-//        gulp.watch('../src/less/bootstrap/**/*.less', ['compilecssbootstrap']);
+        gulp.watch('../src/less/bootstrap/*.less', ['compilecssbootstrap']);
         gulp.watch(jsSrc, ['jscs', 'lint', 'compressjs']);
         gulp.watch('../src/**/*.html', ['minifyhtml']);
 
@@ -231,15 +231,13 @@
 
 
     gulp.task('default', [
-        'server',
-        'jscs',
-        'compileimages',
-        'compressjs',
-        'compilecss',
-        'minifyhtml'
-       ,'compilecssbootstrap'
+        'server'
+        ,'jscs'
+        ,'compileimages'
+        ,'compressjs'
+        ,'compilecss'
+        ,'minifyhtml'
+        ,'compilecssbootstrap'
         ,'compresslibraries'
     ]);
 }());
-
-

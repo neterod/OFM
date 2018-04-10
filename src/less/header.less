@@ -1,5 +1,4 @@
 // main: main.less
-
 #skip-nav {
   top: -30px;
   left: 3px;
@@ -8,6 +7,7 @@
   padding: 4px 8px;
   z-index: 1070;
   position: absolute;
+  color: @dark-blue;
   background-color: @gray-lighter;
   transition: .3s;
   border-radius: 5px;
@@ -27,20 +27,45 @@
     font-size: 16px;
     line-height: 1em;
   }
-  #increase-text {
-    
-  }
-  #decrease-text {
-    
-  }
-  #print-page {
-    
+  #increase-text {}
+  #decrease-text {}
+  #print-page {}
+}
+
+.container>.navbar-header,
+.container-fluid>.navbar-header,
+.container>.navbar-collapse,
+.container-fluid>.navbar-collapse {
+  margin: 0;
+}
+
+@media (max-width: @screen-md) {
+  .navbar .navbar-nav > li {
+    position: static;
   }
 }
 
-@media (min-width: 992px){
+@media screen and (max-width: @screen-sm-max) {
+  .navbar-collapse.collapse {
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.6);
+  }
+}
 
-.navbar-collapse.collapse {
-    width: 246px;
+
+@media screen and (min-width: @screen-md) {
+  .navbar-collapse.collapse {
     position: absolute;
-    }}
+  }
+  .navbar-collapse.collapse .nav-left {
+    width: 224px;
+  }
+  .navbar-internal {
+    .container-fluid {
+      position: relative;
+    }
+  }
+  .nav-bumper {
+    margin-top: 53px;
+    padding-top: 62px!important;
+  }
+}
